@@ -5,3 +5,6 @@ __pycache__/
 data/embeddings.npy
 chroma_db/
 chroma_db/
+*.jsonl
+data/results*.json
+*.log
