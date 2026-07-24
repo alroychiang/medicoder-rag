@@ -1,0 +1,122 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loaded 54 cases
+Loading embedding model: pritamdeka/S-PubMedBert-MS-MARCO
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]Loading weights: 100%|██████████| 199/199 [00:00<00:00, 57626.79it/s]
+
+============================================================
+Case 1/54: case_1
+Ground truth: ['F11.23']
+Severe Opioid Use Disorder  
+Heroin Dependence  
+Drug Detoxification  
+Withdrawal Symptoms  
+Substance Abuse Counseling  
+Individual Therapy  
+Group Therapy  
+Opioid-Free Lifestyle Goal  
+Drug Rehabilitation Therapy  
+Residential Treatment Program  
+Drug-Free Recovery Center  
+Job Training for Recovery
+Extracted conditions (12): ['Severe Opioid Use Disorder', 'Heroin Dependence', 'Drug Detoxification', 'Withdrawal Symptoms', 'Substance Abuse Counseling', 'Individual Therapy', 'Group Therapy', 'Opioid-Free Lifestyle Goal', 'Drug Rehabilitation Therapy', 'Residential Treatment Program', 'Drug-Free Recovery Center', 'Job Training for Recovery']
+Merged candidates: 40
+Ground truth in candidates: 1/1 — {'F1123'}
+F1123  
+F11288  
+Z7151
+Predicted:    ['F1123', 'F11288', 'Z7151']
+Recall:       1.000
+Time:         19.00s
+Tokens:       1054 prompt + 19 completion
+
+============================================================
+Case 2/54: case_2
+Ground truth: ['C53.9']
+Cervical dysplasia  
+Cervical malignancy  
+Inconclusive cervical biopsy  
+Cervical carcinoma  
+Postbiopsy hemorrhage  
+LEEP procedure  
+Colposcopic guidance  
+Cervical conization  
+Histopathologic examination  
+Follow-up required
+Extracted conditions (10): ['Cervical dysplasia', 'Cervical malignancy', 'Inconclusive cervical biopsy', 'Cervical carcinoma', 'Postbiopsy hemorrhage', 'LEEP procedure', 'Colposcopic guidance', 'Cervical conization', 'Histopathologic examination', 'Follow-up required']
+Merged candidates: 40
+Ground truth in candidates: 1/1 — {'C539'}
+C530
+D060
+Z87410
+Predicted:    ['C530', 'D060', 'Z87410']
+Recall:       0.000
+Time:         10.20s
+Tokens:       1019 prompt + 17 completion
+
+============================================================
+Case 3/54: case_3
+Ground truth: ['T18.128A']
+Abdominal pain  
+Nausea  
+Inability to keep anything down  
+Dehydration risk  
+Impacted food bolus  
+Esophageal foreign body  
+Esophageal obstruction  
+Urgent surgical intervention  
+Esophagoscopy  
+Post-procedural hospitalization  
+Oral intake tolerance assessment  
+Discharge following oral intake tolerance  
+Esophageal foreign body removal  
+Esophageal impaction  
+Gastrointestinal discomfort  
+Post-operative recovery  
+Esophageal foreign body removal via forceps  
+
+Extracted conditions (17): ['Abdominal pain', 'Nausea', 'Inability to keep anything down', 'Dehydration risk', 'Impacted food bolus', 'Esophageal foreign body', 'Esophageal obstruction', 'Urgent surgical intervention', 'Esophagoscopy', 'Post-procedural hospitalization', 'Oral intake tolerance assessment', 'Discharge following oral intake tolerance', 'Esophageal foreign body removal', 'Esophageal impaction', 'Gastrointestinal discomfort', 'Post-operative recovery', 'Esophageal foreign body removal via forceps']
+Merged candidates: 40
+Ground truth in candidates: 0/1 — set()
+T18108A
+K222
+R110
+R1084
+R1033
+Predicted:    ['T18108A', 'K222', 'R110', 'R1084', 'R1033']
+Recall:       0.000
+Time:         13.04s
+Tokens:       1014 prompt + 30 completion
+
+============================================================
+Case 4/54: case_4
+Ground truth: ['A41.4', 'K61.0']
+Fever  
+Hypotension  
+Tachycardia  
+Anal pain  
+Fluctuant mass  
+Tender mass  
+Perianal abscess  
+Sepsis  
+Bacteremia  
+B. fragilis sepsis  
+Anaerobic infection  
+Gram-negative bacteremia  
+Abscess drainage  
+Intra-abdominal abscess  
+Purulent drainage  
+Abscess cavity  
+Open wound  
+Post-operative care  
+Antibiotic therapy  
+Intravenous fluid therapy  
+Hospitalization
+Extracted conditions (21): ['Fever', 'Hypotension', 'Tachycardia', 'Anal pain', 'Fluctuant mass', 'Tender mass', 'Perianal abscess', 'Sepsis', 'Bacteremia', 'B. fragilis sepsis', 'Anaerobic infection', 'Gram-negative bacteremia', 'Abscess drainage', 'Intra-abdominal abscess', 'Purulent drainage', 'Abscess cavity', 'Open wound', 'Post-operative care', 'Antibiotic therapy', 'Intravenous fluid therapy', 'Hospitalization']
+Merged candidates: 40
+Ground truth in candidates: 2/2 — {'A414', 'K610'}
+A4159
+R6521
+K611
+B966
+A414/opt/homebrew/Cellar/python@3.14/3.14.6/Frameworks/Python.framework/Versions/3.14/lib/python3.14/multiprocessing/resource_tracker.py:475: UserWarning: resource_tracker: There appear to be 1 leaked semaphore objects to clean up at shutdown: {'/loky-46227-cbw6nvpy'}
+  warnings.warn(

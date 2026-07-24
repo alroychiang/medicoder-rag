@@ -1,3 +1,4 @@
+# AI-assisted: scaffold generated with Claude, reviewed and understood by author.
 """
 Parse the ICD-10-CM codebook text file into a clean JSONL of billable codes only.
 Filters out header/category codes (flag 0), keeps only assignable codes (flag 1).

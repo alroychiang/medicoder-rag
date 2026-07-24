@@ -1,6 +1,7 @@
+# AI-assisted: scaffold generated with Claude, reviewed and understood by author.
 """
 Index pre-computed embeddings into ChromaDB.
-Reads the cleaned .jsonl and corresponding .npy embeddings,
+Reads the cleaned icd10_billable_codes.jsonl and corresponding embeddings.npy,
 then inserts into a persistent ChromaDB collection.
 
 AI-assisted: scaffold generated with Claude, reviewed and understood by author.

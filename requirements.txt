@@ -1,2 +1,7 @@
-sentence-transformers
-chromadb
+# Core dependencies for the medicoder-rag pipeline.
+# Pinned to the versions used during development.
+
+sentence-transformers==5.6.0   # query + codebook embeddings (S-PubMedBert)
+chromadb==1.5.9                # persistent vector store + cosine search
+requests==2.34.2               # HTTP client for the local Ollama API
+numpy==2.5.1                   # embedding array handling / .npy storage

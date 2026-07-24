@@ -1,3 +1,4 @@
+# AI-assisted: scaffold generated with Claude, reviewed and understood by author.
 """
 Embed billable ICD-10-CM code descriptions into vectors.
 Reads the cleaned .jsonl from parse_codebook.py, embeds using
