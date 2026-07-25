@@ -1,84 +1,169 @@
 # medicoder-rag
 
-A retrieval-augmented (RAG) system that assigns ICD-10-CM medical codes to clinical
-notes. Given a free-text medical note, it retrieves candidate codes from the full
-billable ICD-10-CM codebook and uses a local LLM to select the codes that apply.
+A retrieval-augmented generation (RAG) system that assigns **ICD-10-CM medical codes**
+to free-text clinical notes. Given a medical note, it retrieves candidate codes from
+the full billable ICD-10-CM codebook (74,719 codes) and uses a local LLM to select the
+codes that apply — running entirely offline on consumer hardware.
 
-## What it does
+Evaluated on 54 clinical cases: **0.609 recall, 0.237 precision**, ~15s/case.
 
-The pipeline runs in two offline stages (build the index) and one online stage
-(classify cases):
+---
 
-**Index build (run once):**
-1. **Parse** the official ICD-10-CM 2026 order file into a clean JSONL of the
-   ~74.7k *billable* codes (`parse_codebook.py`).
-2. **Embed** each code's description into a vector with S-PubMedBert
-   (`embed_codebook.py`).
-3. **Index** those vectors into a persistent ChromaDB collection
-   (`index_codebook.py`).
+## Problem
 
-**Classification (per case) — `fiftyfour_cases.py`:**
-1. **Decompose** the note into distinct conditions (LLM pass 1: qwen3).
-2. **Retrieve** the top-K codes per condition from ChromaDB (cosine similarity).
-3. **Merge** candidates: dedup by code keeping the closest distance, sort, and cap
-   the pool at 40.
-4. **Select** the final codes from that pool (LLM pass 2: qwen3).
-5. **Evaluate** predictions against ground truth (recall + precision).
+Assigning ICD-10-CM codes to clinical notes is hard for three reasons:
 
-This two-stage design (decompose → retrieve → select) exists because embedding a
-whole multi-condition note as a single query dilutes retrieval; decomposing into
-per-condition queries substantially improves the chance the correct code reaches
-the candidate pool.
+- **Multiple diagnoses per note.** A single case describes several distinct conditions.
+- **Vernacular gap.** Clinicians write "herniated disc"; the codebook says
+  "intervertebral disc displacement".
+- **A huge, near-duplicate search space.** 74,719 billable codes, many differing only
+  in encounter type or severity.
 
-## Requirements
+## Architecture
 
-- Python 3.11+
-- [Ollama](https://ollama.com) running locally (default `http://localhost:11434`)
-- The ICD-10-CM 2026 order file at `data/icd10cm_order_2026.txt`
-- The evaluation cases at `data/icd10_cm_cases.json`
+Two phases: an **offline** index build (run once) and an **online** inference pipeline
+(per case).
+
+### Offline — build the vector index (once)
+
+```
+icd10cm_order_2026.txt (98,186 lines)
+        │  parse_codebook.py   — keep billable (flag-1) codes, drop parent headers
+        ▼
+icd10_billable_codes.jsonl (74,719 codes)
+        │  embed_codebook.py   — S-PubMedBert-MS-MARCO
+        ▼
+embeddings.npy (74,719 vectors)
+        │  index_codebook.py   — load into ChromaDB (cosine, HNSW)
+        ▼
+chroma_db/
+```
+
+### Online — per case (`fiftyfour_cases.py`)
+
+```
+Medical note (free text)
+        │  LLM CALL 1 (qwen3:8b) — extract distinct conditions
+        ▼
+Individual conditions (~10–15 per case)
+        │  embed each (S-PubMedBert, batched) → retrieve top-15 per condition
+        ▼
+Candidate codes (~130)
+        │  merge + dedup (keep min distance) + sort + cap at 40   [deterministic, no LLM]
+        ▼
+≤40 candidates
+        │  LLM CALL 2 (qwen3:8b) — select final codes from note + candidates
+        ▼
+Predicted ICD-10 codes → evaluate (recall, precision, time, tokens)
+```
+
+**The critical insight — query decomposition.** Embedding the *whole note* as one
+vector gave ≈0 recall: a diagnostic showed only **28/158** ground-truth codes reached
+even the top-100. The root cause was embedding dilution — a multi-diagnosis note
+averages into a vector close to no single code. Splitting the note into per-condition
+queries (LLM call 1) and retrieving for each is what makes retrieval work.
+
+## Key design decisions
+
+- **Embedding model — S-PubMedBert-MS-MARCO.** PubMedBERT is pretrained on biomedical
+  text and MS-MARCO fine-tuned for retrieval. (Caveat: trained on journal prose, not
+  ICD billing labels — the vernacular gap isn't fully closed.)
+- **LLM — qwen3:8b via Ollama.** Local, offline, open-source. 8B fits consumer hardware
+  (developed on a 16GB MacBook M4: ~5GB model weights + ~400MB embeddings + ~1GB
+  ChromaDB).
+- **Deterministic middle (dedup/sort/cap).** No LLM in the merge step — repeatable and
+  cheap.
+- **Temperature 0.0** — deterministic output, so Version A/B comparisons are fair.
+- **`num_predict=100`** — a safety brake. Under greedy decoding the model once fell into
+  an infinite loop repeating codes and hung the run; a hard token cap stops that.
+- **Cap candidates at 40** — passing all ~130 made the LLM emit markdown essays instead
+  of code lists; 40 keeps it focused.
+
+## Results
+
+### Version comparison (does the second LLM earn its place?)
+
+| Metric | Version A (retrieval only) | Version B (retrieval + LLM) |
+|---|---|---|
+| Avg recall | 0.308 | **0.609** |
+| Avg precision | 0.048 | **0.237** |
+| Avg time/case | 6.06s | 15.11s |
+
+Version B nearly doubles recall and quintuples precision at ~2.5× the latency — so the
+selection LLM stays.
+
+### Final — all 54 cases
+
+| Metric | Value |
+|---|---|
+| Average recall | **0.609** |
+| Average precision | **0.237** |
+| Retrieval recall | 0.671 (106/158 ground-truth codes reached the pool) |
+| LLM retention | 91% of recoverable codes selected |
+| Avg time/case | 15.11s |
+| Total tokens | 70,751 (67,443 prompt + 3,308 completion) |
+
+Read together: retrieval is now the bottleneck (33% of codes never reach the pool),
+while the LLM keeps 91% of what it *does* see — which is why the final-stage LLM is
+worth keeping. See `data/results_full.json` for per-case detail.
 
 ## Setup
 
 ```bash
-# 1. Create and activate a virtual environment
+# 1. Virtual environment
 python3 -m venv venv
 source venv/bin/activate
 
-# 2. Install Python dependencies
+# 2. Python dependencies
 pip install -r requirements.txt
 
-# 3. Pull the LLM used for extraction + selection
-ollama pull qwen3:8b
+# 3. Local LLM (extraction + selection)
+ollama pull qwen3:8b        # requires Ollama: https://ollama.com
 ```
 
-The embedding model (`pritamdeka/S-PubMedBert-MS-MARCO`) is downloaded
-automatically by `sentence-transformers` on first use.
+Requirements: **Python 3.11+** and **Ollama** running locally
+(`http://localhost:11434`). The embedding model
+(`pritamdeka/S-PubMedBert-MS-MARCO`) downloads automatically on first use.
+
+## Data
+
+The large/proprietary data files are **not committed** (see `.gitignore`):
+
+- **ICD-10-CM codebook** (`data/icd10cm_order_2026.txt`, ~14MB, public domain) —
+  download from the CMS ICD-10-CM files page (search "CMS ICD-10-CM 2026"): grab the
+  *"Code Descriptions in Tabular Order"* archive and place `icd10cm_order_2026.txt`
+  in `data/`.
+- **Evaluation cases** (`data/icd10_cm_cases.json`) — the original assignment dataset is
+  not redistributed here. A small **synthetic** `data/sample_cases.json` (same schema)
+  is provided so you can run the pipeline end-to-end. Supply your own cases in the same
+  format to evaluate on real data.
+
+Cases file schema:
+
+```json
+{ "cases": [ { "medical_note": "…", "icd10_cm": { "codes": ["N30.00"] } } ] }
+```
 
 ## Running the pipeline (in order)
 
-Run these from the project root with the venv active. Steps 1–3 build the vector
-index and only need to be run once (or whenever the codebook changes).
+From the project root with the venv active. Steps 1–3 build the index and only need to
+run once (or when the codebook changes).
 
 ```bash
-# 1. Parse the codebook -> data/icd10_billable_codes.jsonl
-python parse_codebook.py
-
-# 2. Embed code descriptions -> data/embeddings.npy
-python embed_codebook.py
-
-# 3. Index vectors into ChromaDB -> chroma_db/
-python index_codebook.py
-
-# (optional) sanity-check retrieval
-python retrieve_check.py
-
-# 4. Run the full evaluation over all 54 cases
-python fiftyfour_cases.py
+python parse_codebook.py     # 1. codebook -> data/icd10_billable_codes.jsonl
+python embed_codebook.py     # 2. embed    -> data/embeddings.npy
+python index_codebook.py     # 3. index    -> chroma_db/
+python retrieve_check.py     # (optional) sanity-check retrieval
+python fiftyfour_cases.py    # 4. run + evaluate -> data/results_full.json
 ```
+
+**Quick demo without the real dataset:** point the pipeline at the synthetic sample by
+setting `CASES_PATH = "data/sample_cases.json"` at the top of `fiftyfour_cases.py`
+(and `MAX_CASES = None`).
 
 ## Configuration
 
-Key knobs live at the top of `fiftyfour_cases.py`:
+Knobs at the top of `fiftyfour_cases.py`:
 
 | Setting | Default | Meaning |
 |---|---|---|
@@ -86,30 +171,47 @@ Key knobs live at the top of `fiftyfour_cases.py`:
 | `EMBEDDING_MODEL` | `pritamdeka/S-PubMedBert-MS-MARCO` | query/codebook embeddings |
 | `CANDIDATES_PER_CONDITION` | `15` | codes retrieved per extracted condition |
 | `MAX_CANDIDATES_FOR_LLM` | `40` | cap on the merged candidate pool |
-| `MAX_CASES` | `None` | limit cases processed (`None` = all 54) |
+| `MAX_CASES` | `None` | limit cases processed (`None` = all) |
 
-The LLM calls use `temperature=0.0` (deterministic) and `num_predict=100`.
+## Project structure
 
-## Results
+```
+.
+├── parse_codebook.py     # parse ICD-10-CM order file -> billable-codes JSONL
+├── embed_codebook.py     # embed code descriptions -> .npy
+├── index_codebook.py     # load vectors into ChromaDB
+├── retrieve_check.py     # retrieval helpers + standalone sanity check
+├── fiftyfour_cases.py    # main pipeline (decompose -> retrieve -> select -> eval)
+├── requirements.txt
+├── data/
+│   ├── sample_cases.json     # synthetic demo cases (committed)
+│   └── results_full.json     # evaluation output (committed as evidence)
+└── docs/
+    └── section2_design.pdf   # full design write-up
+```
 
-The evaluation writes detailed, per-case results to **`data/results_full.json`**,
-and prints a summary to the console including:
+## Limitations
 
-- **Average recall** and **average precision** across cases
-- **Average time per case** and total token usage
-- **Two-stage recall breakdown** — retrieval recall (how many ground-truth codes
-  reached the candidate pool) vs. final recall (how many the LLM actually kept)
+- **Retrieval ceiling of 67.1%** — 52/158 ground-truth codes never reach the pool.
+- Embedding model trained on PubMed prose, not ICD billing terminology.
+- No hybrid (lexical + semantic) search.
+- Low precision (0.237): ~5 codes predicted per case, ~1 correct.
+- Condition extraction is left to the LLM; merged/under-split conditions go unchecked
+  and dilute their embeddings.
 
-## Files
+## Future improvements
 
-| File | Role |
-|---|---|
-| `parse_codebook.py` | Parse ICD-10-CM order file → billable-codes JSONL |
-| `embed_codebook.py` | Embed code descriptions → `.npy` |
-| `index_codebook.py` | Load vectors into ChromaDB |
-| `retrieve_check.py` | Retrieval helpers + standalone sanity check |
-| `fiftyfour_cases.py` | Main evaluation pipeline |
+- **Codebook enrichment** — augment each code with official CMS/NCHS synonyms and
+  inclusion terms before embedding, closing the vernacular gap. (Authoritative data,
+  *not* LLM-invented.)
+- **Hybrid retrieval** — combine embeddings with BM25 for exact-term matches.
+- **Few-shot prompting** — show worked examples to guide selection on ambiguous cases.
+- **Structured JSON output** — force code-list output, eliminating essay/`<think>` noise.
+- **Self-consistency** — run selection several times and keep majority-voted codes.
+- **Hallucination guardrail** — drop any predicted code not in the candidate pool.
+- **Encounter-type consistency** — detect contradictory A/D/S suffixes for the same
+  condition (e.g. `T18128A` vs `T18128D`) and resolve to one.
 
 ---
 
-*AI-assisted: scaffolding generated with Claude, reviewed and understood by author.*
+*AI-assisted: scaffolding generated with Claude, reviewed and understood by the author.*

@@ -1,10 +1,25 @@
+# Python
 venv/
 __pycache__/
 *.pyc
+
+# OS
 .DS_Store
+
+# Generated pipeline artifacts (rebuilt by the pipeline — see README)
 data/embeddings.npy
-chroma_db/
-chroma_db/
+data/icd10_billable_codes.jsonl
 *.jsonl
-data/results*.json
+chroma_db/
 *.log
+
+# Run outputs (contain ground-truth codes — not published; see README for summary)
+data/results*.json
+
+# Proprietary / large source data — NOT redistributed (see README "Data" section)
+data/icd10_cm_cases.json
+data/icd10cm_order_2026.txt
+
+# Assignment submission packaging (not part of the open-source repo)
+Alroy_Chiang_MLEAssignment/
+*.zip

@@ -1,0 +1,21 @@
+{
+    "cases": [
+        {
+            "medical_note": "A 55-year-old female presented to the clinic with a three-day history of burning on urination, increased urinary frequency, and lower abdominal discomfort. She denied fever, flank pain, or blood in the urine. Urinalysis demonstrated pyuria and positive nitrites consistent with a lower urinary tract infection. She was diagnosed with acute cystitis and started on a course of oral antibiotics with instructions to increase fluid intake and follow up if symptoms worsened.",
+            "icd10_cm": {
+                "codes": [
+                    "N30.00"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 62-year-old male with a long-standing history of type 2 diabetes mellitus presented for a routine follow-up appointment. He reported good adherence to his oral medication. On examination his blood pressure was elevated at 152/94 mmHg on repeat readings, and he was noted to have essential hypertension. His fasting blood glucose was mildly elevated but there were no signs of diabetic complications. His metformin was continued and an antihypertensive agent was added, with lifestyle counseling provided.",
+            "icd10_cm": {
+                "codes": [
+                    "E11.9",
+                    "I10"
+                ]
+            }
+        }
+    ]
+}
