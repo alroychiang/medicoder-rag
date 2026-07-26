@@ -23,3 +23,7 @@ data/icd10cm_order_2026.txt
 # Assignment submission packaging (not part of the open-source repo)
 Alroy_Chiang_MLEAssignment/
 *.zip
+
+# Local experimental files (kept out of the repo)
+fiftyfour_cases_retrieval_only.py
+retrieval_diagnostic.py
