@@ -5,7 +5,8 @@ to free-text clinical notes. Given a medical note, it retrieves candidate codes 
 the full billable ICD-10-CM codebook (74,719 codes) and uses a local LLM to select the
 codes that apply — running entirely offline on consumer hardware.
 
-Evaluated on 54 clinical cases: **0.609 recall, 0.237 precision**, ~15s/case.
+Evaluated on 54 clinical cases: **0.532 recall, 0.152 precision** — 84 of 158
+ground-truth codes recovered — at ~15s/case.
 
 ---
 
@@ -83,7 +84,7 @@ queries (LLM call 1) and retrieving for each is what makes retrieval work.
 
 ### Version comparison (does the second LLM earn its place?)
 
-| Metric | Version A (retrieval only) | Version B (retrieval + LLM) |
+| Metric (per-case mean) | Version A (retrieval only) | Version B (retrieval + LLM) |
 |---|---|---|
 | Avg recall | 0.308 | **0.609** |
 | Avg precision | 0.048 | **0.237** |
@@ -92,20 +93,33 @@ queries (LLM call 1) and retrieving for each is what makes retrieval work.
 Version B nearly doubles recall and quintuples precision at ~2.5× the latency — so the
 selection LLM stays.
 
+These two columns are per-case means, not the overall counts reported below: Version A
+was measured on a partial run, so the two versions are only comparable to each other
+under the same averaging. Re-run both over all 54 cases to compare them on overall
+recall and precision.
+
 ### Final — all 54 cases
+
+Metrics are counted across all cases (total correct ÷ total codes), not averaged
+per case — a per-case mean weights a 1-code case the same as a 10-code case, which
+measures the typical case rather than the pipeline.
 
 | Metric | Value |
 |---|---|
-| Average recall | **0.609** |
-| Average precision | **0.237** |
+| Overall recall | **0.532** (84 of 158 ground-truth codes found) |
+| Overall precision | **0.152** (84 of 551 predicted codes correct) |
 | Retrieval recall | 0.671 (106/158 ground-truth codes reached the pool) |
-| LLM retention | 91% of recoverable codes selected |
+| LLM retention | 79% (84 of the 106 pooled codes selected) |
 | Avg time/case | 15.11s |
 | Total tokens | 70,751 (67,443 prompt + 3,308 completion) |
 
-Read together: retrieval is now the bottleneck (33% of codes never reach the pool),
-while the LLM keeps 91% of what it *does* see — which is why the final-stage LLM is
-worth keeping. See `data/results_full.json` for per-case detail.
+For reference, the per-case means are 0.609 recall and 0.237 precision — higher than
+the overall figures because cases with few ground-truth codes are easier to score
+well on and carry equal weight in that average.
+
+Read together: retrieval is the bottleneck (52 of 158 codes, 33%, never reach the
+pool), while the LLM keeps 79% of what it *does* see — which is why the final-stage
+LLM is worth keeping. See `data/results_full.json` for per-case detail.
 
 ## Setup
 
@@ -192,10 +206,11 @@ Knobs at the top of `fiftyfour_cases.py`:
 
 ## Limitations
 
-- **Retrieval ceiling of 67.1%** — 52/158 ground-truth codes never reach the pool.
+- **Retrieval ceiling of 67.1%** — 52/158 ground-truth codes never reach the pool,
+  so no amount of LLM improvement can recover them.
 - Embedding model trained on PubMed prose, not ICD billing terminology.
 - No hybrid (lexical + semantic) search.
-- Low precision (0.237): ~5 codes predicted per case, ~1 correct.
+- Low precision (0.152): ~10 codes predicted per case, ~1.6 correct.
 - Condition extraction is left to the LLM; merged/under-split conditions go unchecked
   and dilute their embeddings.
 

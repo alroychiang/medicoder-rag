@@ -1,0 +1,609 @@
+<title>medicoder-rag — ICD-10-CM coding evaluation</title>
+<style>
+  :root {
+    --ground:    #F4F6F6;
+    --surface:   #FFFFFF;
+    --sunken:    #EAEEEE;
+    --line:      #D6DDDD;
+    --line-soft: #E4EAEA;
+    --ink:       #101819;
+    --ink-mid:   #4A5658;
+    --ink-soft:  #6E7B7E;
+    --accent:    #0B6A6E;
+    --accent-bg: #E2EFEF;
+    --hit:       #226E4B;
+    --hit-bg:    #E1F0E7;
+    --missed:    #A63D34;
+    --missed-bg: #F7E5E2;
+    --spurious:      #6E7B7E;
+    --spurious-bg:   #EAEEEE;
+
+    --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+    --fs-xs:   0.6875rem;
+    --fs-sm:   0.8125rem;
+    --fs-base: 0.9375rem;
+    --fs-md:   1.0625rem;
+    --fs-lg:   1.375rem;
+    --fs-xl:   2rem;
+    --fs-2xl:  2.625rem;
+
+    --r: 3px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ground:    #0E1416;
+      --surface:   #161E21;
+      --sunken:    #121A1C;
+      --line:      #2A3639;
+      --line-soft: #212C2F;
+      --ink:       #E4EAEA;
+      --ink-mid:   #A3B0B2;
+      --ink-soft:  #7C8A8D;
+      --accent:    #4FB3B5;
+      --accent-bg: #16302F;
+      --hit:       #5FBF88;
+      --hit-bg:    #142B20;
+      --missed:    #E08479;
+      --missed-bg: #331916;
+      --spurious:    #8A9799;
+      --spurious-bg: #1D2629;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground:    #0E1416;
+    --surface:   #161E21;
+    --sunken:    #121A1C;
+    --line:      #2A3639;
+    --line-soft: #212C2F;
+    --ink:       #E4EAEA;
+    --ink-mid:   #A3B0B2;
+    --ink-soft:  #7C8A8D;
+    --accent:    #4FB3B5;
+    --accent-bg: #16302F;
+    --hit:       #5FBF88;
+    --hit-bg:    #142B20;
+    --missed:    #E08479;
+    --missed-bg: #331916;
+    --spurious:    #8A9799;
+    --spurious-bg: #1D2629;
+  }
+
+  :root[data-theme="light"] {
+    --ground:    #F4F6F6;
+    --surface:   #FFFFFF;
+    --sunken:    #EAEEEE;
+    --line:      #D6DDDD;
+    --line-soft: #E4EAEA;
+    --ink:       #101819;
+    --ink-mid:   #4A5658;
+    --ink-soft:  #6E7B7E;
+    --accent:    #0B6A6E;
+    --accent-bg: #E2EFEF;
+    --hit:       #226E4B;
+    --hit-bg:    #E1F0E7;
+    --missed:    #A63D34;
+    --missed-bg: #F7E5E2;
+    --spurious:    #6E7B7E;
+    --spurious-bg: #EAEEEE;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: var(--fs-base);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .wrap {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 32px 24px 56px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  /* ---- masthead ---- */
+  .masthead { display: flex; flex-direction: column; gap: 10px; }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: var(--fs-xs);
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  h1 {
+    margin: 0;
+    font-size: var(--fs-xl);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+
+  .lede {
+    margin: 0;
+    max-width: 62ch;
+    color: var(--ink-mid);
+    font-size: var(--fs-md);
+  }
+
+  .config {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 18px;
+    font-family: var(--mono);
+    font-size: var(--fs-xs);
+    color: var(--ink-soft);
+    padding-top: 4px;
+  }
+  .config b { color: var(--ink-mid); font-weight: 500; }
+
+  /* ---- summary strip ---- */
+  .strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(158px, 1fr));
+    background: var(--line-soft);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    gap: 1px;
+    overflow: hidden;
+  }
+
+  .stat {
+    background: var(--surface);
+    padding: 15px 18px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .stat-label {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .stat-val {
+    font-family: var(--mono);
+    font-size: var(--fs-2xl);
+    font-weight: 500;
+    letter-spacing: -0.045em;
+    font-variant-numeric: tabular-nums;
+    line-height: 1.05;
+  }
+  .stat-val.lead { color: var(--accent); }
+
+  .stat-sub { font-size: var(--fs-xs); color: var(--ink-soft); }
+
+  /* ---- funnel ---- */
+  .funnel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    padding: 16px 18px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+  }
+
+  .funnel-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+
+  .funnel-title {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  .funnel-note { font-size: var(--fs-sm); color: var(--ink-mid); }
+
+  .bars { display: flex; flex-direction: column; gap: 7px; }
+
+  .bar-row {
+    display: grid;
+    grid-template-columns: 152px 1fr 92px;
+    align-items: center;
+    gap: 12px;
+    font-size: var(--fs-sm);
+  }
+
+  .bar-name { color: var(--ink-mid); }
+
+  .bar-track {
+    height: 9px;
+    background: var(--sunken);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+
+  /* display:block is load-bearing — an inline span ignores width/height. */
+  .bar-fill { display: block; height: 100%; border-radius: 1px; }
+  .bar-fill.stage1 { background: var(--accent); }
+  .bar-fill.stage2 { background: var(--hit); }
+  .bar-fill.stage3 { background: var(--spurious); }
+
+  .bar-val {
+    font-family: var(--mono);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    color: var(--ink);
+  }
+
+  /* ---- workspace ---- */
+  .workspace {
+    display: grid;
+    grid-template-columns: 268px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .panel {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--r);
+    overflow: hidden;
+  }
+
+  .panel-head {
+    padding: 11px 15px;
+    border-bottom: 1px solid var(--line-soft);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background: var(--sunken);
+  }
+
+  .panel-title {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+  }
+
+  /* case rail */
+  .rail { max-height: 620px; overflow-y: auto; }
+
+  .case-btn {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas: "id score" "bar bar";
+    gap: 5px 10px;
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px 11px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid var(--line-soft);
+    border-left: 2px solid transparent;
+    color: var(--ink-mid);
+    font-family: var(--sans);
+    font-size: var(--fs-sm);
+    cursor: pointer;
+  }
+  .case-btn:hover { background: var(--sunken); color: var(--ink); }
+  .case-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+  .case-btn[aria-current="true"] {
+    background: var(--accent-bg);
+    border-left-color: var(--accent);
+    color: var(--ink);
+  }
+
+  .case-id {
+    grid-area: id;
+    font-family: var(--mono);
+    font-size: var(--fs-sm);
+  }
+
+  .case-score {
+    grid-area: score;
+    font-family: var(--mono);
+    font-size: var(--fs-xs);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+  }
+
+  .case-bar {
+    grid-area: bar;
+    height: 3px;
+    background: var(--sunken);
+    border-radius: 1px;
+    overflow: hidden;
+  }
+  .case-bar span { display: block; height: 100%; background: var(--hit); }
+  .case-bar span[data-zero="true"] { background: var(--missed); }
+
+  /* detail */
+  .detail { display: flex; flex-direction: column; gap: 18px; }
+
+  .note-body {
+    padding: 16px 18px;
+    max-height: 210px;
+    overflow-y: auto;
+    font-size: var(--fs-base);
+    line-height: 1.68;
+    color: var(--ink-mid);
+    white-space: pre-wrap;
+  }
+
+  .metrics {
+    display: flex;
+    gap: 20px;
+    font-family: var(--mono);
+    font-size: var(--fs-xs);
+    font-variant-numeric: tabular-nums;
+    color: var(--ink-soft);
+    flex-wrap: wrap;
+  }
+  .metrics b { color: var(--ink); font-weight: 500; }
+
+  .codes { padding: 16px 18px 18px; display: flex; flex-direction: column; gap: 15px; }
+
+  .group { display: flex; flex-direction: column; gap: 7px; }
+
+  .group-label {
+    font-size: var(--fs-xs);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: baseline;
+    gap: 7px;
+  }
+  .group-label i {
+    font-style: normal;
+    font-family: var(--mono);
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+    opacity: 0.75;
+  }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+
+  .chip {
+    font-family: var(--mono);
+    font-size: var(--fs-sm);
+    padding: 3px 9px 4px;
+    border-radius: 2px;
+    border: 1px solid transparent;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    letter-spacing: 0.01em;
+  }
+  .chip::before { font-size: var(--fs-xs); opacity: 0.85; }
+
+  .chip.hit      { background: var(--hit-bg);      color: var(--hit);      border-color: var(--hit); }
+  .chip.hit::before      { content: "\2713"; }
+  .chip.missed   { background: var(--missed-bg);   color: var(--missed);   border-color: var(--missed); }
+  .chip.missed::before   { content: "\2717"; }
+  .chip.spurious { background: var(--spurious-bg); color: var(--spurious); border-color: var(--line); }
+  .chip.spurious::before { content: "+"; }
+
+  .empty { font-size: var(--fs-sm); color: var(--ink-soft); font-style: italic; }
+
+  /* ---- footnote ---- */
+  .footnote {
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    font-size: var(--fs-sm);
+    color: var(--ink-soft);
+    max-width: 76ch;
+  }
+  .footnote b { color: var(--ink-mid); font-weight: 600; }
+
+  @media (max-width: 880px) {
+    .workspace { grid-template-columns: 1fr; }
+    .rail { max-height: 232px; }
+    .bar-row { grid-template-columns: 108px 1fr 82px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * { transition: none !important; animation: none !important; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="masthead">
+    <h1>Retrieval-augmented ICD-10-CM coding</h1>
+    <p class="lede">
+      Before a reimbursement claim can be obtained from an insurance company, standardised
+      ICD-10-CM codes must be attached to the corresponding clinical note. Previously this
+      was done manually, against a codebook of 74,719 billable codes. However, clinical
+      notes are written in informal medical language — &ldquo;herniated disc&rdquo; — while
+      the codebook uses standardised terminology — &ldquo;intervertebral disc
+      displacement&rdquo;. This prototype bridges that gap automatically: it splits a note
+      into individual conditions, retrieves candidate codes by meaning rather than keyword,
+      then has a language model select the ones that apply.
+    </p>
+    <div class="config" id="config"></div>
+  </header>
+
+  <section class="strip" id="strip"></section>
+
+  <section class="funnel">
+    <div class="funnel-head">
+      <div class="funnel-title">Where the codes are lost</div>
+      <div class="funnel-note" id="funnelNote"></div>
+    </div>
+    <div class="bars" id="bars"></div>
+  </section>
+
+  <section class="workspace">
+    <div class="panel">
+      <div class="panel-head">
+        <span class="panel-title">Cases</span>
+        <span class="panel-title" id="caseCount"></span>
+      </div>
+      <div class="rail" id="rail" role="listbox" aria-label="Evaluation cases"></div>
+    </div>
+
+    <div class="detail">
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">Clinical note</span>
+          <span class="panel-title" id="activeId"></span>
+        </div>
+        <div class="note-body" id="note"></div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-head">
+          <span class="panel-title">Predicted codes</span>
+          <span class="metrics" id="caseMetrics"></span>
+        </div>
+        <div class="codes" id="codes"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footnote">
+    <p style="margin:0">
+      This is an evaluation viewer for a research prototype.
+    </p>
+    <p style="margin:0" id="provenance"></p>
+  </footer>
+
+</div>
+
+<script>
+  const DATA = /*__DATA__*/ null;
+  const S = DATA.summary;
+  const CASES = DATA.cases;
+
+  const fixed3 = (v) => v.toFixed(3);
+
+  // Pipeline-level totals, counted across every case rather than averaged per
+  // case. A per-case mean weights a 1-code case the same as a 10-code case, which
+  // answers "how did a typical case go" — not "how did the pipeline do".
+  const pooled = S.gt_in_pool;
+  const selected = CASES.reduce((n, c) => n + c.hits.length, 0);
+  const predictedAll = CASES.reduce((n, c) => n + c.predicted.length, 0);
+
+  /* ---- config line ---- */
+  document.getElementById("config").innerHTML = [
+    ["Selection LLM", S.model],
+    ["Embeddings", S.embedding_model],
+    ["Retrieved / condition", S.candidates_per_condition],
+    ["Candidate cap", S.max_candidates_for_llm],
+  ].map(([k, v]) => `${k} <b>${v}</b>`).join("");
+
+  /* ---- summary strip ---- */
+  document.getElementById("strip").innerHTML = [
+    { label: "Overall recall",    val: fixed3(selected / S.gt_total),   sub: `${selected} of ${S.gt_total} ground-truth codes found`, lead: true },
+    { label: "Overall precision", val: fixed3(selected / predictedAll), sub: `${selected} of ${predictedAll} predicted codes correct` },
+    { label: "Cases evaluated",   val: S.num_cases,                     sub: `${S.gt_total} ground-truth codes` },
+    { label: "Time / case",       val: S.average_time_seconds.toFixed(1) + "s", sub: "two LLM calls, local" },
+    { label: "Total tokens",      val: (S.total_tokens / 1000).toFixed(1) + "k", sub: `${S.total_prompt_tokens.toLocaleString()} prompt` },
+  ].map(s => `
+    <div class="stat">
+      <span class="stat-label">${s.label}</span>
+      <span class="stat-val${s.lead ? " lead" : ""}">${s.val}</span>
+      <span class="stat-sub">${s.sub}</span>
+    </div>`).join("");
+
+  /* ---- funnel ---- */
+  document.getElementById("funnelNote").textContent =
+    `Retrieval is the bottleneck: ${S.gt_total - pooled} of ${S.gt_total} ground-truth codes never reach the candidate pool. `
+    + `The selection LLM then drops ${pooled - selected} of the ${pooled} it receives.`;
+
+  // Bar WIDTH is always a share of the 158 ground-truth codes, so the funnel
+  // narrows honestly; the label states each stage against its own input.
+  document.getElementById("bars").innerHTML = [
+    { name: "Ground-truth codes",  frac: 1,                     val: `${S.gt_total}`,                cls: "stage3" },
+    { name: "Retrieved into pool", frac: pooled / S.gt_total,   val: `${pooled} of ${S.gt_total}`,   cls: "stage1" },
+    { name: "Selected by LLM",     frac: selected / S.gt_total, val: `${selected} of ${pooled}`,     cls: "stage2" },
+  ].map(b => `
+    <div class="bar-row">
+      <span class="bar-name">${b.name}</span>
+      <span class="bar-track"><span class="bar-fill ${b.cls}" style="width:${(b.frac * 100).toFixed(1)}%"></span></span>
+      <span class="bar-val">${b.val}</span>
+    </div>`).join("");
+
+  /* ---- case rail ---- */
+  document.getElementById("caseCount").textContent = CASES.length;
+
+  const rail = document.getElementById("rail");
+  rail.innerHTML = CASES.map((c, i) => `
+    <button class="case-btn" role="option" data-i="${i}" aria-current="${i === 0}" aria-selected="${i === 0}">
+      <span class="case-id">${c.case_id}</span>
+      <span class="case-score">${fixed3(c.recall)}</span>
+      <span class="case-bar"><span style="width:${(c.recall * 100).toFixed(0)}%" data-zero="${c.recall === 0}"></span></span>
+    </button>`).join("");
+
+  /* ---- detail rendering ---- */
+  const groupHTML = (label, codes, cls, hint) => `
+    <div class="group">
+      <span class="group-label">${label}${hint ? ` <i>${hint}</i>` : ""}</span>
+      ${codes.length
+        ? `<div class="chips">${codes.map(c => `<span class="chip ${cls}">${c}</span>`).join("")}</div>`
+        : `<span class="empty">None</span>`}
+    </div>`;
+
+  function select(i) {
+    const c = CASES[i];
+
+    rail.querySelectorAll(".case-btn").forEach((b, j) => {
+      b.setAttribute("aria-current", String(j === i));
+      b.setAttribute("aria-selected", String(j === i));
+    });
+
+    document.getElementById("activeId").textContent = c.case_id;
+    document.getElementById("note").textContent = c.medical_note;
+
+    document.getElementById("caseMetrics").innerHTML =
+      `<span>recall <b>${fixed3(c.recall)}</b></span>`
+      + `<span>precision <b>${fixed3(c.precision)}</b></span>`
+      + `<span>${c.time_seconds}s</span>`
+      + `<span>${c.prompt_tokens + c.completion_tokens} tok</span>`;
+
+    document.getElementById("codes").innerHTML =
+      groupHTML("Correctly predicted", c.hits, "hit", `${c.hits.length} of ${c.ground_truth.length} ground truth`)
+      + groupHTML("Missed ground truth codes", c.missed, "missed", "not predicted")
+      + groupHTML("Excess LLM predicted codes", c.spurious, "spurious", "");
+  }
+
+  rail.addEventListener("click", (e) => {
+    const btn = e.target.closest(".case-btn");
+    if (btn) select(Number(btn.dataset.i));
+  });
+
+  rail.addEventListener("keydown", (e) => {
+    if (e.key !== "ArrowDown" && e.key !== "ArrowUp") return;
+    const btns = [...rail.querySelectorAll(".case-btn")];
+    const cur = btns.indexOf(document.activeElement);
+    if (cur === -1) return;
+    e.preventDefault();
+    const next = btns[cur + (e.key === "ArrowDown" ? 1 : -1)];
+    if (next) { next.focus(); select(Number(next.dataset.i)); }
+  });
+
+  document.getElementById("provenance").textContent =
+    `${S.num_cases} cases, ${S.model} for extraction and selection, `
+    + `${S.embedding_model} for retrieval over the 2026 CMS billable code set.`;
+
+  select(0);
+</script>

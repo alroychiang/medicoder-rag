@@ -13,17 +13,22 @@ data/icd10_billable_codes.jsonl
 chroma_db/
 *.log
 
-# Run outputs (contain ground-truth codes — not published; see README for summary)
+# Run outputs — partial/experimental runs stay local; the full 54-case run is
+# committed because the demo viewer is built from it.
 data/results*.json
+!data/results_full.json
 
-# Proprietary / large source data — NOT redistributed (see README "Data" section)
-data/icd10_cm_cases.json
+# Large source data — re-downloadable, not worth versioning.
+# The CMS codebook is public domain; see README "Data" for the download link.
 data/icd10cm_order_2026.txt
+
+# Demo viewer: index.html is committed (it is what gets hosted, and has the data
+# inlined). demo_data.json is an intermediate — regenerate with build_demo_data.py.
+demo/demo_data.json
 
 # Assignment submission packaging (not part of the open-source repo)
 Alroy_Chiang_MLEAssignment/
 *.zip
 
 # Local experimental files (kept out of the repo)
-fiftyfour_cases_retrieval_only.py
 retrieval_diagnostic.py

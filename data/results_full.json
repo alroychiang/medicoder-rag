@@ -1,0 +1,1431 @@
+{
+  "summary": {
+    "model": "qwen3:8b",
+    "embedding_model": "pritamdeka/S-PubMedBert-MS-MARCO",
+    "candidates_per_condition": 15,
+    "max_candidates_for_llm": 40,
+    "num_cases": 54,
+    "average_recall": 0.609,
+    "average_precision": 0.237,
+    "average_time_seconds": 15.11,
+    "total_prompt_tokens": 67443,
+    "total_completion_tokens": 3308,
+    "total_tokens": 70751,
+    "retrieval_recall": 0.671,
+    "gt_in_pool": 106,
+    "gt_total": 158
+  },
+  "results": [
+    {
+      "case_id": "case_1",
+      "ground_truth": [
+        "F11.23"
+      ],
+      "predicted": [
+        "F1123",
+        "F11288",
+        "F11282",
+        "F11251",
+        "F11281",
+        "F1124",
+        "F1113",
+        "F11259",
+        "F11159",
+        "F11151",
+        "F11250",
+        "F11222",
+        "F11181",
+        "F1114",
+        "F1129"
+      ],
+      "recall": 1.0,
+      "precision": 0.06666666666666667,
+      "time_seconds": 24.2,
+      "prompt_tokens": 1155,
+      "completion_tokens": 100,
+      "llm_raw_response": "F1123\nF11288\nF11282\nF11251\nF11281\nF1124\nF1113\nF11259\nF11159\nF11151\nF11250\nF11222\nF11181\nF1114\nF1129\n"
+    },
+    {
+      "case_id": "case_2",
+      "ground_truth": [
+        "C53.9"
+      ],
+      "predicted": [
+        "N870",
+        "R87613",
+        "R877",
+        "D060",
+        "C530"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 11.14,
+      "prompt_tokens": 1201,
+      "completion_tokens": 27,
+      "llm_raw_response": "N870\nR87613\nR877\nD060\nC530"
+    },
+    {
+      "case_id": "case_3",
+      "ground_truth": [
+        "T18.128A"
+      ],
+      "predicted": [
+        "K222",
+        "R1084",
+        "R10817",
+        "R110",
+        "T18128A",
+        "T18128D",
+        "T18128S"
+      ],
+      "recall": 1.0,
+      "precision": 0.14285714285714285,
+      "time_seconds": 11.64,
+      "prompt_tokens": 1110,
+      "completion_tokens": 47,
+      "llm_raw_response": "K222\nR1084\nR10817\nR110\nT18128A\nT18128D\nT18128S"
+    },
+    {
+      "case_id": "case_4",
+      "ground_truth": [
+        "A41.4",
+        "K61.0"
+      ],
+      "predicted": [
+        "K612",
+        "K610",
+        "R6521",
+        "B966",
+        "A414"
+      ],
+      "recall": 1.0,
+      "precision": 0.4,
+      "time_seconds": 14.07,
+      "prompt_tokens": 1076,
+      "completion_tokens": 26,
+      "llm_raw_response": "K612\nK610\nR6521\nB966\nA414"
+    },
+    {
+      "case_id": "case_5",
+      "ground_truth": [
+        "M16.4"
+      ],
+      "predicted": [
+        "M1652",
+        "M1651",
+        "J13",
+        "D250"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 10.99,
+      "prompt_tokens": 1099,
+      "completion_tokens": 21,
+      "llm_raw_response": "M1652\nM1651\nJ13\nD250"
+    },
+    {
+      "case_id": "case_6",
+      "ground_truth": [
+        "M51.26",
+        "M47.26"
+      ],
+      "predicted": [
+        "M5417",
+        "M5416",
+        "M5127",
+        "M5117",
+        "M5459",
+        "M79605",
+        "M5451",
+        "M5450",
+        "M5415",
+        "M9963",
+        "M5126",
+        "M5418",
+        "M5410",
+        "M5411",
+        "M5414",
+        "M5413",
+        "M54"
+      ],
+      "recall": 0.5,
+      "precision": 0.058823529411764705,
+      "time_seconds": 16.37,
+      "prompt_tokens": 1126,
+      "completion_tokens": 100,
+      "llm_raw_response": "M5417  \nM5416  \nM5127  \nM5117  \nM5459  \nM79605  \nM5451  \nM5450  \nM5415  \nM9963  \nM5126  \nM5418  \nM5410  \nM5411  \nM5414  \nM5413  \nM54"
+    },
+    {
+      "case_id": "case_7",
+      "ground_truth": [
+        "I21.19",
+        "I25.10",
+        "I25.83",
+        "I48.19"
+      ],
+      "predicted": [
+        "I2583",
+        "I4811",
+        "I25119",
+        "I4820"
+      ],
+      "recall": 0.25,
+      "precision": 0.25,
+      "time_seconds": 10.42,
+      "prompt_tokens": 1254,
+      "completion_tokens": 25,
+      "llm_raw_response": "I2583\nI4811\nI25119\nI4820"
+    },
+    {
+      "case_id": "case_8",
+      "ground_truth": [
+        "I25.110",
+        "F17.210"
+      ],
+      "predicted": [
+        "I200",
+        "F17213",
+        "I25118",
+        "I25119",
+        "F17218",
+        "F17228",
+        "I25710",
+        "I25720",
+        "I25750",
+        "I25760",
+        "I25790",
+        "I25700",
+        "I2584",
+        "I25110",
+        "I2511"
+      ],
+      "recall": 0.5,
+      "precision": 0.06666666666666667,
+      "time_seconds": 18.49,
+      "prompt_tokens": 1517,
+      "completion_tokens": 100,
+      "llm_raw_response": "I200\nF17213\nI25118\nI25119\nF17218\nF17228\nI25710\nI25720\nI25750\nI25760\nI25790\nI25700\nI2584\nI25110\nI2511"
+    },
+    {
+      "case_id": "case_9",
+      "ground_truth": [
+        "C76.3"
+      ],
+      "predicted": [
+        "C480",
+        "C763",
+        "N80351",
+        "N80352",
+        "N80353",
+        "N80359",
+        "N80354",
+        "N80355",
+        "N80356",
+        "N80357",
+        "N80358",
+        "N80359",
+        "N80351",
+        "N80352",
+        "N80353"
+      ],
+      "recall": 1.0,
+      "precision": 0.09090909090909091,
+      "time_seconds": 16.31,
+      "prompt_tokens": 1239,
+      "completion_tokens": 100,
+      "llm_raw_response": "C480\nC763\nN80351\nN80352\nN80353\nN80359\nN80354\nN80355\nN80356\nN80357\nN80358\nN80359\nN80351\nN80352\nN80353"
+    },
+    {
+      "case_id": "case_10",
+      "ground_truth": [
+        "I86.4",
+        "K92.0",
+        "K70.30",
+        "K70.10",
+        "I85.00",
+        "F10.20"
+      ],
+      "predicted": [
+        "K7030",
+        "I8501",
+        "I864",
+        "K7011",
+        "K7031",
+        "K2101",
+        "I426",
+        "K709",
+        "B1711",
+        "K7201",
+        "K7211",
+        "K2901",
+        "K2211",
+        "K2081",
+        "K860",
+        "K7010",
+        "K702",
+        "K70"
+      ],
+      "recall": 0.5,
+      "precision": 0.16666666666666666,
+      "time_seconds": 14.39,
+      "prompt_tokens": 1008,
+      "completion_tokens": 100,
+      "llm_raw_response": "K7030  \nI8501  \nI864  \nK7011  \nK7031  \nK2101  \nI426  \nK709  \nB1711  \nK7201  \nK7211  \nK2901  \nK2211  \nK2081  \nK860  \nK7010  \nK702  \nK70"
+    },
+    {
+      "case_id": "case_11",
+      "ground_truth": [
+        "L56.5",
+        "Z77.128",
+        "X32.XXXA"
+      ],
+      "predicted": [
+        "L565",
+        "X32XXXD",
+        "X32XXXA",
+        "L570",
+        "X32XXXS",
+        "L569",
+        "L568",
+        "W898XXD",
+        "L579",
+        "W898XXA",
+        "W899XXD",
+        "L821",
+        "W899XXA",
+        "W902XXD",
+        "W898XXS",
+        "R238",
+        "L578"
+      ],
+      "recall": 0.6666666666666666,
+      "precision": 0.11764705882352941,
+      "time_seconds": 17.16,
+      "prompt_tokens": 1189,
+      "completion_tokens": 100,
+      "llm_raw_response": "L565\nX32XXXD\nX32XXXA\nL570\nX32XXXS\nL569\nL568\nW898XXD\nL579\nW898XXA\nW899XXD\nL821\nW899XXA\nW902XXD\nW898XXS\nR238\nL578"
+    },
+    {
+      "case_id": "case_12",
+      "ground_truth": [
+        "A46"
+      ],
+      "predicted": [
+        "A400",
+        "L0889",
+        "L089",
+        "B950",
+        "Z792",
+        "R600",
+        "R609",
+        "R601",
+        "H05221",
+        "L54"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 16.07,
+      "prompt_tokens": 1168,
+      "completion_tokens": 52,
+      "llm_raw_response": "A400\nL0889\nL089\nB950\nZ792\nR600\nR609\nR601\nH05221\nL54"
+    },
+    {
+      "case_id": "case_13",
+      "ground_truth": [
+        "C34.01",
+        "C79.51",
+        "J43.9",
+        "Z87.891"
+      ],
+      "predicted": [
+        "C3401",
+        "J438",
+        "C7951",
+        "J439"
+      ],
+      "recall": 0.75,
+      "precision": 0.75,
+      "time_seconds": 11.94,
+      "prompt_tokens": 1354,
+      "completion_tokens": 22,
+      "llm_raw_response": "C3401\nJ438\nC7951\nJ439"
+    },
+    {
+      "case_id": "case_14",
+      "ground_truth": [
+        "I46.9",
+        "I11.9",
+        "Y93.H1",
+        "Y92.014",
+        "Y99.8"
+      ],
+      "predicted": [
+        "I462",
+        "I219",
+        "I468",
+        "I119",
+        "I469"
+      ],
+      "recall": 0.4,
+      "precision": 0.4,
+      "time_seconds": 10.16,
+      "prompt_tokens": 1229,
+      "completion_tokens": 25,
+      "llm_raw_response": "I462\nI219\nI468\nI119\nI469"
+    },
+    {
+      "case_id": "case_15",
+      "ground_truth": [
+        "L89.153",
+        "L89.212",
+        "D62",
+        "E11.9",
+        "I10",
+        "M47.26",
+        "R15.9",
+        "G89.29"
+      ],
+      "predicted": [
+        "L89153",
+        "L89154",
+        "L89152",
+        "L89151",
+        "E1165",
+        "M5416",
+        "M5417",
+        "L89159",
+        "E1121",
+        "E11638",
+        "L89893",
+        "M5116",
+        "E1159",
+        "E1169",
+        "M5415",
+        "D50"
+      ],
+      "recall": 0.125,
+      "precision": 0.0625,
+      "time_seconds": 18.76,
+      "prompt_tokens": 1270,
+      "completion_tokens": 100,
+      "llm_raw_response": "L89153\nL89154\nL89152\nL89151\nE1165\nM5416\nM5417\nL89159\nE1121\nE11638\nL89893\nM5116\nE1159\nE1169\nM5415\nD50"
+    },
+    {
+      "case_id": "case_16",
+      "ground_truth": [
+        "L89.313",
+        "L97.411",
+        "I70.203"
+      ],
+      "predicted": [
+        "L89893",
+        "I7091",
+        "L97419",
+        "L8993",
+        "L97418",
+        "L89610",
+        "L89894",
+        "L89813",
+        "L97411",
+        "L97429",
+        "L89611",
+        "L97414",
+        "L97428",
+        "L89223",
+        "L974"
+      ],
+      "recall": 0.3333333333333333,
+      "precision": 0.06666666666666667,
+      "time_seconds": 15.0,
+      "prompt_tokens": 1279,
+      "completion_tokens": 100,
+      "llm_raw_response": "L89893\nI7091\nL97419\nL8993\nL97418\nL89610\nL89894\nL89813\nL97411\nL97429\nL89611\nL97414\nL97428\nL89223\nL974"
+    },
+    {
+      "case_id": "case_17",
+      "ground_truth": [
+        "F14.20"
+      ],
+      "predicted": [
+        "F14288",
+        "F1424",
+        "F1420",
+        "F1494",
+        "F14988",
+        "F14280",
+        "F14980",
+        "F14259",
+        "F1499",
+        "Z7389",
+        "F04",
+        "R4189",
+        "R402344",
+        "T423X4A",
+        "T423X4S"
+      ],
+      "recall": 1.0,
+      "precision": 0.06666666666666667,
+      "time_seconds": 15.88,
+      "prompt_tokens": 1202,
+      "completion_tokens": 100,
+      "llm_raw_response": "F14288\nF1424\nF1420\nF1494\nF14988\nF14280\nF14980\nF14259\nF1499\nZ7389\nF04\nR4189\nR402344\nT423X4A\nT423X4S\nT"
+    },
+    {
+      "case_id": "case_18",
+      "ground_truth": [
+        "N39.0",
+        "B96.4",
+        "I25.10",
+        "Z98.61",
+        "J44.9",
+        "Z87.440"
+      ],
+      "predicted": [
+        "R8271",
+        "R10A2",
+        "R108A2",
+        "R5381",
+        "Z87440",
+        "N390",
+        "I10",
+        "J449",
+        "N111",
+        "R10A0"
+      ],
+      "recall": 0.5,
+      "precision": 0.3,
+      "time_seconds": 12.46,
+      "prompt_tokens": 993,
+      "completion_tokens": 57,
+      "llm_raw_response": "R8271\nR10A2\nR108A2\nR5381\nZ87440\nN390\nI10\nJ449\nN111\nR10A0"
+    },
+    {
+      "case_id": "case_19",
+      "ground_truth": [
+        "J69.0",
+        "J96.00",
+        "J44.9"
+      ],
+      "predicted": [
+        "J440",
+        "J411",
+        "J9600",
+        "J206",
+        "J9601",
+        "J441",
+        "J4489",
+        "J449",
+        "J9620",
+        "J9621",
+        "J9622",
+        "J9620",
+        "J9621",
+        "J9622",
+        "J9600",
+        "J9601",
+        "J9620",
+        "J96"
+      ],
+      "recall": 0.6666666666666666,
+      "precision": 0.16666666666666666,
+      "time_seconds": 15.27,
+      "prompt_tokens": 1216,
+      "completion_tokens": 100,
+      "llm_raw_response": "J440  \nJ411  \nJ9600  \nJ206  \nJ9601  \nJ441  \nJ4489  \nJ449  \nJ9620  \nJ9621  \nJ9622  \nJ9620  \nJ9621  \nJ9622  \nJ9600  \nJ9601  \nJ9620  \nJ96"
+    },
+    {
+      "case_id": "case_20",
+      "ground_truth": [
+        "C50.211",
+        "Z80.3"
+      ],
+      "predicted": [
+        "C50211",
+        "Z803",
+        "Z853"
+      ],
+      "recall": 1.0,
+      "precision": 0.6666666666666666,
+      "time_seconds": 16.59,
+      "prompt_tokens": 1444,
+      "completion_tokens": 17,
+      "llm_raw_response": "C50211\nZ803\nZ853"
+    },
+    {
+      "case_id": "case_21",
+      "ground_truth": [
+        "I08.3",
+        "I13.2",
+        "I50.32",
+        "N18.6",
+        "D63.1",
+        "E78.5",
+        "Z86.19",
+        "Z99.2"
+      ],
+      "predicted": [
+        "N186",
+        "I5032",
+        "D631",
+        "B182",
+        "I5031",
+        "I5022",
+        "I5042",
+        "I068",
+        "I079",
+        "I060",
+        "I071",
+        "I072",
+        "I080",
+        "I082",
+        "I081",
+        "I069",
+        "I1311",
+        "I1310",
+        "I129"
+      ],
+      "recall": 0.375,
+      "precision": 0.15789473684210525,
+      "time_seconds": 24.69,
+      "prompt_tokens": 1683,
+      "completion_tokens": 100,
+      "llm_raw_response": "N186\nI5032\nD631\nB182\nI5031\nI5022\nI5042\nI068\nI079\nI060\nI071\nI072\nI080\nI082\nI081\nI069\nI1311\nI1310\nI129"
+    },
+    {
+      "case_id": "case_22",
+      "ground_truth": [
+        "K56.50",
+        "E03.9",
+        "I10",
+        "E78.5",
+        "F43.0"
+      ],
+      "predicted": [
+        "R10A1",
+        "F430",
+        "R100",
+        "I10",
+        "E039",
+        "K55019",
+        "F4389",
+        "R030"
+      ],
+      "recall": 0.6,
+      "precision": 0.375,
+      "time_seconds": 17.98,
+      "prompt_tokens": 1268,
+      "completion_tokens": 43,
+      "llm_raw_response": "R10A1\nF430\nR100\nI10\nE039\nK55019\nF4389\nR030"
+    },
+    {
+      "case_id": "case_23",
+      "ground_truth": [
+        "K40.91"
+      ],
+      "predicted": [
+        "K4091",
+        "K4041",
+        "R200",
+        "L7681",
+        "L7682",
+        "L7602",
+        "L089",
+        "L988",
+        "L99",
+        "L986",
+        "L923",
+        "L986",
+        "L7682",
+        "L7602",
+        "L089",
+        "L988",
+        "L99",
+        "L986",
+        "L923"
+      ],
+      "recall": 1.0,
+      "precision": 0.09090909090909091,
+      "time_seconds": 25.32,
+      "prompt_tokens": 1807,
+      "completion_tokens": 100,
+      "llm_raw_response": "K4091\nK4041\nR200\nL7681\nL7682\nL7602\nL089\nL988\nL99\nL986\nL923\nL986\nL7682\nL7602\nL089\nL988\nL99\nL986\nL923\n"
+    },
+    {
+      "case_id": "case_24",
+      "ground_truth": [
+        "J96.21",
+        "J43.1",
+        "J1569",
+        "Z99.11"
+      ],
+      "predicted": [
+        "J431",
+        "J9621",
+        "J1569",
+        "Z9911",
+        "J9620",
+        "J9601",
+        "J9611",
+        "J9691",
+        "J9690",
+        "J9602",
+        "J9612",
+        "J9622",
+        "J9600",
+        "J9610",
+        "Z430",
+        "J9509",
+        "J9504"
+      ],
+      "recall": 1.0,
+      "precision": 0.23529411764705882,
+      "time_seconds": 21.0,
+      "prompt_tokens": 1351,
+      "completion_tokens": 100,
+      "llm_raw_response": "J431  \nJ9621  \nJ1569  \nZ9911  \nJ9620  \nJ9601  \nJ9611  \nJ9691  \nJ9690  \nJ9602  \nJ9612  \nJ9622  \nJ9600  \nJ9610  \nZ430  \nJ9509  \nJ9504  \n"
+    },
+    {
+      "case_id": "case_25",
+      "ground_truth": [
+        "I49.5",
+        "I50.9"
+      ],
+      "predicted": [
+        "I495",
+        "I5022",
+        "R55",
+        "I5030",
+        "R5383",
+        "R054",
+        "I5020",
+        "I5040",
+        "I5042",
+        "I5023",
+        "I5043",
+        "I5041",
+        "I5033",
+        "I5031",
+        "I50812",
+        "I5040",
+        "I5042"
+      ],
+      "recall": 0.5,
+      "precision": 0.06666666666666667,
+      "time_seconds": 16.79,
+      "prompt_tokens": 1411,
+      "completion_tokens": 100,
+      "llm_raw_response": "I495\nI5022\nR55\nI5030\nR5383\nR054\nI5020\nI5040\nI5042\nI5023\nI5043\nI5041\nI5033\nI5031\nI50812\nI5040\nI5042\nI"
+    },
+    {
+      "case_id": "case_26",
+      "ground_truth": [
+        "I50.42",
+        "I11.0",
+        "J96.10",
+        "N39.0",
+        "S52.502A",
+        "W18.11XA",
+        "Y92.013",
+        "Z51.5",
+        "Z87.440",
+        "Z99.81"
+      ],
+      "predicted": [
+        "I5042",
+        "J9610",
+        "I110",
+        "J9612",
+        "R531",
+        "R5383",
+        "S52322K",
+        "Z87440",
+        "R0603",
+        "J9622"
+      ],
+      "recall": 0.4,
+      "precision": 0.4,
+      "time_seconds": 15.64,
+      "prompt_tokens": 1404,
+      "completion_tokens": 61,
+      "llm_raw_response": "I5042\nJ9610\nI110\nJ9612\nR531\nR5383\nS52322K\nZ87440\nR0603\nJ9622"
+    },
+    {
+      "case_id": "case_27",
+      "ground_truth": [
+        "H60.42",
+        "H66.92",
+        "Q87.410"
+      ],
+      "predicted": [
+        "H6042",
+        "H6622",
+        "Q87410",
+        "H7012",
+        "H7122",
+        "H7112",
+        "H7102",
+        "H7132"
+      ],
+      "recall": 0.6666666666666666,
+      "precision": 0.25,
+      "time_seconds": 13.06,
+      "prompt_tokens": 1129,
+      "completion_tokens": 49,
+      "llm_raw_response": "H6042\nH6622\nQ87410\nH7012\nH7122\nH7112\nH7102\nH7132"
+    },
+    {
+      "case_id": "case_28",
+      "ground_truth": [
+        "D66",
+        "M36.2"
+      ],
+      "predicted": [
+        "M362",
+        "M363",
+        "M25061",
+        "M25062",
+        "M5127"
+      ],
+      "recall": 0.5,
+      "precision": 0.2,
+      "time_seconds": 15.63,
+      "prompt_tokens": 1267,
+      "completion_tokens": 30,
+      "llm_raw_response": "M362\nM363\nM25061\nM25062\nM5127"
+    },
+    {
+      "case_id": "case_29",
+      "ground_truth": [
+        "F43.12",
+        "R45.851"
+      ],
+      "predicted": [
+        "F4312",
+        "F4310",
+        "F515",
+        "G4729",
+        "G478",
+        "R4589"
+      ],
+      "recall": 0.5,
+      "precision": 0.16666666666666666,
+      "time_seconds": 11.27,
+      "prompt_tokens": 1155,
+      "completion_tokens": 34,
+      "llm_raw_response": "F4312\nF4310\nF515\nG4729\nG478\nR4589"
+    },
+    {
+      "case_id": "case_30",
+      "ground_truth": [
+        "K95.09",
+        "E66.9",
+        "Z68.41",
+        "E86.0"
+      ],
+      "predicted": [
+        "E860",
+        "K9509",
+        "Z6841"
+      ],
+      "recall": 0.75,
+      "precision": 1.0,
+      "time_seconds": 9.44,
+      "prompt_tokens": 1279,
+      "completion_tokens": 17,
+      "llm_raw_response": "E860\nK9509\nZ6841"
+    },
+    {
+      "case_id": "case_31",
+      "ground_truth": [
+        "H16.072",
+        "Z94.7",
+        "Q90.9"
+      ],
+      "predicted": [
+        "H16072",
+        "H16073",
+        "H16042",
+        "H16041",
+        "H16043",
+        "H16049",
+        "H16041",
+        "H16043",
+        "H16049",
+        "H16079",
+        "H16073",
+        "H16072",
+        "H16079",
+        "H16073"
+      ],
+      "recall": 0.3333333333333333,
+      "precision": 0.14285714285714285,
+      "time_seconds": 18.35,
+      "prompt_tokens": 1343,
+      "completion_tokens": 100,
+      "llm_raw_response": "H16072\nH16073\nH16042\nH16041\nH16043\nH16049\nH16041\nH16043\nH16049\nH16079\nH16073\nH16072\nH16079\nH16073\nH1"
+    },
+    {
+      "case_id": "case_32",
+      "ground_truth": [
+        "J90"
+      ],
+      "predicted": [
+        "J918",
+        "J948",
+        "J949",
+        "J920",
+        "J910",
+        "J90",
+        "J9381",
+        "J948",
+        "J949",
+        "J918",
+        "J90",
+        "J910",
+        "J920",
+        "J9381",
+        "J948",
+        "J949",
+        "J918",
+        "J90",
+        "J910",
+        "J920"
+      ],
+      "recall": 1.0,
+      "precision": 0.14285714285714285,
+      "time_seconds": 14.44,
+      "prompt_tokens": 1126,
+      "completion_tokens": 100,
+      "llm_raw_response": "J918\nJ948\nJ949\nJ920\nJ910\nJ90\nJ9381\nJ948\nJ949\nJ918\nJ90\nJ910\nJ920\nJ9381\nJ948\nJ949\nJ918\nJ90\nJ910\nJ920\nJ"
+    },
+    {
+      "case_id": "case_33",
+      "ground_truth": [
+        "C71.3",
+        "C78.01",
+        "R73.03",
+        "F17.210"
+      ],
+      "predicted": [
+        "R110",
+        "H538",
+        "H5319",
+        "R0789",
+        "F17213",
+        "R7303",
+        "R7303",
+        "R1111",
+        "G44221",
+        "G894",
+        "F17298",
+        "Z87891",
+        "M5127",
+        "M5126",
+        "M5125",
+        "J310"
+      ],
+      "recall": 0.25,
+      "precision": 0.06666666666666667,
+      "time_seconds": 17.37,
+      "prompt_tokens": 1247,
+      "completion_tokens": 96,
+      "llm_raw_response": "R110\nH538\nH5319\nR0789\nF17213\nR7303\nR7303\nR1111\nG44221\nG894\nF17298\nZ87891\nM5127\nM5126\nM5125\nJ310"
+    },
+    {
+      "case_id": "case_34",
+      "ground_truth": [
+        "I85.11",
+        "K70.30",
+        "F10.239",
+        "D69.6"
+      ],
+      "predicted": [
+        "I8501",
+        "K7030",
+        "F10231",
+        "D696",
+        "I8511",
+        "K709",
+        "K7010",
+        "F10230",
+        "F10130",
+        "K2921",
+        "K2211",
+        "K2101",
+        "K2081",
+        "K2901",
+        "K7011",
+        "K702",
+        "K704"
+      ],
+      "recall": 0.75,
+      "precision": 0.17647058823529413,
+      "time_seconds": 18.44,
+      "prompt_tokens": 1370,
+      "completion_tokens": 100,
+      "llm_raw_response": "I8501\nK7030\nF10231\nD696\nI8511\nK709\nK7010\nF10230\nF10130\nK2921\nK2211\nK2101\nK2081\nK2901\nK7011\nK702\nK704"
+    },
+    {
+      "case_id": "case_35",
+      "ground_truth": [
+        "G61.0"
+      ],
+      "predicted": [
+        "G610",
+        "R838",
+        "R834",
+        "R448",
+        "R94131"
+      ],
+      "recall": 1.0,
+      "precision": 0.2,
+      "time_seconds": 11.61,
+      "prompt_tokens": 1131,
+      "completion_tokens": 27,
+      "llm_raw_response": "G610\nR838\nR834\nR448\nR94131"
+    },
+    {
+      "case_id": "case_36",
+      "ground_truth": [
+        "M23.221",
+        "I11.9"
+      ],
+      "predicted": [
+        "I119",
+        "M23221",
+        "S83221A"
+      ],
+      "recall": 1.0,
+      "precision": 0.6666666666666666,
+      "time_seconds": 16.96,
+      "prompt_tokens": 1572,
+      "completion_tokens": 20,
+      "llm_raw_response": "I119  \nM23221  \nS83221A"
+    },
+    {
+      "case_id": "case_37",
+      "ground_truth": [
+        "C18.4",
+        "D63.0"
+      ],
+      "predicted": [
+        "C184",
+        "D630",
+        "D6481"
+      ],
+      "recall": 1.0,
+      "precision": 0.6666666666666666,
+      "time_seconds": 8.26,
+      "prompt_tokens": 961,
+      "completion_tokens": 16,
+      "llm_raw_response": "C184  \nD630  \nD6481"
+    },
+    {
+      "case_id": "case_38",
+      "ground_truth": [
+        "I21.09",
+        "I25.10"
+      ],
+      "predicted": [
+        "I25118",
+        "T82855A",
+        "T82855D",
+        "T82855S"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 13.36,
+      "prompt_tokens": 1361,
+      "completion_tokens": 31,
+      "llm_raw_response": "I25118\nT82855A\nT82855D\nT82855S"
+    },
+    {
+      "case_id": "case_39",
+      "ground_truth": [
+        "J18.9",
+        "C90.00",
+        "D61.810",
+        "T45.1X5A"
+      ],
+      "predicted": [
+        "D61810",
+        "D630",
+        "J1569",
+        "F4322",
+        "D696"
+      ],
+      "recall": 0.25,
+      "precision": 0.2,
+      "time_seconds": 13.79,
+      "prompt_tokens": 1249,
+      "completion_tokens": 29,
+      "llm_raw_response": "D61810  \nD630  \nJ1569  \nF4322  \nD696"
+    },
+    {
+      "case_id": "case_40",
+      "ground_truth": [
+        "G83.4",
+        "M48.062"
+      ],
+      "predicted": [
+        "G834",
+        "M48062",
+        "R338",
+        "R531",
+        "S343XXS",
+        "S343XXD",
+        "S343XXA"
+      ],
+      "recall": 1.0,
+      "precision": 0.2857142857142857,
+      "time_seconds": 12.42,
+      "prompt_tokens": 1141,
+      "completion_tokens": 43,
+      "llm_raw_response": "G834\nM48062\nR338\nR531\nS343XXS\nS343XXD\nS343XXA"
+    },
+    {
+      "case_id": "case_41",
+      "ground_truth": [
+        "G20A1",
+        "L02.212"
+      ],
+      "predicted": [
+        "L02217",
+        "M5127",
+        "G20B2",
+        "G20A2",
+        "T428X5A",
+        "L02419"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 17.89,
+      "prompt_tokens": 1352,
+      "completion_tokens": 40,
+      "llm_raw_response": "L02217\nM5127\nG20B2\nG20A2\nT428X5A\nL02419"
+    },
+    {
+      "case_id": "case_42",
+      "ground_truth": [
+        "D09.0",
+        "E11.9",
+        "I10"
+      ],
+      "predicted": [
+        "D090",
+        "E1165",
+        "I10",
+        "D0910"
+      ],
+      "recall": 0.6666666666666666,
+      "precision": 0.5,
+      "time_seconds": 10.57,
+      "prompt_tokens": 1142,
+      "completion_tokens": 21,
+      "llm_raw_response": "D090\nE1165\nI10\nD0910"
+    },
+    {
+      "case_id": "case_43",
+      "ground_truth": [
+        "I24.9",
+        "I25.10"
+      ],
+      "predicted": [
+        "I25110",
+        "I25118",
+        "I25119",
+        "I25708",
+        "I25718",
+        "I25711",
+        "I25798",
+        "I25728",
+        "I25790",
+        "I25111",
+        "I25112",
+        "I2511",
+        "I25118",
+        "I25119",
+        "I25"
+      ],
+      "recall": 0.0,
+      "precision": 0.0,
+      "time_seconds": 19.68,
+      "prompt_tokens": 1380,
+      "completion_tokens": 100,
+      "llm_raw_response": "I25110\nI25118\nI25119\nI25708\nI25718\nI25711\nI25798\nI25728\nI25790\nI25111\nI25112\nI2511\nI25118\nI25119\nI25"
+    },
+    {
+      "case_id": "case_44",
+      "ground_truth": [
+        "M70.42",
+        "M22.42"
+      ],
+      "predicted": [
+        "M7042",
+        "M2242",
+        "M94262",
+        "M25562",
+        "M222X2",
+        "N178",
+        "R338"
+      ],
+      "recall": 1.0,
+      "precision": 0.2857142857142857,
+      "time_seconds": 20.46,
+      "prompt_tokens": 1638,
+      "completion_tokens": 43,
+      "llm_raw_response": "M7042\nM2242\nM94262\nM25562\nM222X2\nN178\nR338"
+    },
+    {
+      "case_id": "case_45",
+      "ground_truth": [
+        "G90.01"
+      ],
+      "predicted": [
+        "G9001",
+        "R55",
+        "Z950",
+        "G451",
+        "T84226D",
+        "T84226S",
+        "T84226A",
+        "Z45010",
+        "Z4502",
+        "Z45018",
+        "Z95810"
+      ],
+      "recall": 1.0,
+      "precision": 0.09090909090909091,
+      "time_seconds": 15.04,
+      "prompt_tokens": 1143,
+      "completion_tokens": 71,
+      "llm_raw_response": "G9001\nR55\nZ950\nG451\nT84226D\nT84226S\nT84226A\nZ45010\nZ4502\nZ45018\nZ95810"
+    },
+    {
+      "case_id": "case_46",
+      "ground_truth": [
+        "H44.511",
+        "H57.11",
+        "D66"
+      ],
+      "predicted": [
+        "H5711",
+        "H44511",
+        "H44519",
+        "H53141",
+        "M362",
+        "Z1402",
+        "H44521"
+      ],
+      "recall": 0.6666666666666666,
+      "precision": 0.2857142857142857,
+      "time_seconds": 11.6,
+      "prompt_tokens": 990,
+      "completion_tokens": 45,
+      "llm_raw_response": "H5711\nH44511\nH44519\nH53141\nM362\nZ1402\nH44521"
+    },
+    {
+      "case_id": "case_47",
+      "ground_truth": [
+        "K55.029",
+        "K55.049",
+        "A41.51",
+        "J96.00",
+        "I10",
+        "E03.9",
+        "R65.20",
+        "Z51.5"
+      ],
+      "predicted": [
+        "A4151",
+        "J9601",
+        "K55059",
+        "R0603",
+        "K55032",
+        "J9602",
+        "J9621",
+        "K55039",
+        "K55019",
+        "K55012",
+        "J80",
+        "K55052",
+        "J95821",
+        "J9600",
+        "K55031",
+        "J962"
+      ],
+      "recall": 0.25,
+      "precision": 0.125,
+      "time_seconds": 16.4,
+      "prompt_tokens": 1317,
+      "completion_tokens": 100,
+      "llm_raw_response": "A4151\nJ9601\nK55059\nR0603\nK55032\nJ9602\nJ9621\nK55039\nK55019\nK55012\nJ80\nK55052\nJ95821\nJ9600\nK55031\nJ962"
+    },
+    {
+      "case_id": "case_48",
+      "ground_truth": [
+        "L89.156",
+        "I50.32",
+        "I25.10",
+        "I25.82"
+      ],
+      "predicted": [
+        "L89156",
+        "I5032",
+        "I2582",
+        "I5042",
+        "I7092",
+        "M5127",
+        "I50812",
+        "L89136",
+        "L89116",
+        "L89896",
+        "M5126",
+        "L89516",
+        "L89326",
+        "L89526",
+        "L89316"
+      ],
+      "recall": 0.75,
+      "precision": 0.2,
+      "time_seconds": 16.28,
+      "prompt_tokens": 1202,
+      "completion_tokens": 100,
+      "llm_raw_response": "L89156\nI5032\nI2582\nI5042\nI7092\nM5127\nI50812\nL89136\nL89116\nL89896\nM5126\nL89516\nL89326\nL89526\nL89316\nL"
+    },
+    {
+      "case_id": "case_49",
+      "ground_truth": [
+        "K26.0",
+        "K44.9"
+      ],
+      "predicted": [
+        "K260",
+        "K269",
+        "K280"
+      ],
+      "recall": 0.5,
+      "precision": 0.3333333333333333,
+      "time_seconds": 10.09,
+      "prompt_tokens": 1229,
+      "completion_tokens": 15,
+      "llm_raw_response": "K260\nK269\nK280"
+    },
+    {
+      "case_id": "case_50",
+      "ground_truth": [
+        "C44.41",
+        "L57.0"
+      ],
+      "predicted": [
+        "C4441",
+        "L570"
+      ],
+      "recall": 1.0,
+      "precision": 1.0,
+      "time_seconds": 11.93,
+      "prompt_tokens": 1377,
+      "completion_tokens": 11,
+      "llm_raw_response": "C4441\nL570"
+    },
+    {
+      "case_id": "case_51",
+      "ground_truth": [
+        "D59.11",
+        "M32.9"
+      ],
+      "predicted": [
+        "D5911",
+        "M328",
+        "Y830",
+        "D739",
+        "D5910",
+        "Y836"
+      ],
+      "recall": 0.5,
+      "precision": 0.16666666666666666,
+      "time_seconds": 12.89,
+      "prompt_tokens": 1206,
+      "completion_tokens": 32,
+      "llm_raw_response": "D5911\nM328\nY830\nD739\nD5910\nY836"
+    },
+    {
+      "case_id": "case_52",
+      "ground_truth": [
+        "H44.011"
+      ],
+      "predicted": [
+        "H44011",
+        "H20052",
+        "H44021",
+        "H44019",
+        "R6520",
+        "A419",
+        "A4151",
+        "A4152",
+        "A4154",
+        "A413",
+        "A4181",
+        "A414",
+        "A4101",
+        "A4151",
+        "A4152",
+        "A4154",
+        "A41"
+      ],
+      "recall": 1.0,
+      "precision": 0.07142857142857142,
+      "time_seconds": 17.23,
+      "prompt_tokens": 1213,
+      "completion_tokens": 100,
+      "llm_raw_response": "H44011\nH20052\nH44021\nH44019\nR6520\nA419\nA4151\nA4152\nA4154\nA413\nA4181\nA414\nA4101\nA4151\nA4152\nA4154\nA41"
+    },
+    {
+      "case_id": "case_53",
+      "ground_truth": [
+        "I82.431",
+        "I50.9"
+      ],
+      "predicted": [
+        "I82431",
+        "I5022",
+        "M79661",
+        "R2241",
+        "I82491",
+        "I824Y1",
+        "I82401",
+        "I824Z1",
+        "I825Y1",
+        "I82501",
+        "I82591",
+        "I825Z1",
+        "I82531",
+        "I82551",
+        "I825"
+      ],
+      "recall": 0.5,
+      "precision": 0.06666666666666667,
+      "time_seconds": 17.05,
+      "prompt_tokens": 1314,
+      "completion_tokens": 100,
+      "llm_raw_response": "I82431\nI5022\nM79661\nR2241\nI82491\nI824Y1\nI82401\nI824Z1\nI825Y1\nI82501\nI82591\nI825Z1\nI82531\nI82551\nI825"
+    },
+    {
+      "case_id": "case_54",
+      "ground_truth": [
+        "D50.9"
+      ],
+      "predicted": [
+        "D508",
+        "D509",
+        "D500"
+      ],
+      "recall": 1.0,
+      "precision": 0.3333333333333333,
+      "time_seconds": 5.86,
+      "prompt_tokens": 556,
+      "completion_tokens": 15,
+      "llm_raw_response": "D508\nD509\nD500"
+    }
+  ]
+}

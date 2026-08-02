@@ -1,0 +1,540 @@
+{
+    "cases": [
+        {
+            "medical_note": "A 38-year-old male was admitted to the drug treatment unit of the local hospital for detoxification from heroin, an opioid drug he has been dependent on for several years. The addiction medicine physician describes his dependence as severe opioid use disorder. In anticipation of expected withdrawal symptoms, the patient is managed medically, pharmacologically, and psychologically over the next five days with individual and group motivational substance abuse counseling. The patient suffers multiple symptoms of withdrawal but copes with the process appropriately. By day six, the patient is actively engaged in individual and group therapy to reach his goal of an \u201copioid-free lifestyle\u201d within his drug rehabilitation therapy. He has undergone drug detoxification in the past but appears much more committed during this hospital stay. The patient is discharged from the hospital on day eight to immediately enter a 21-day residential program at a local residential treatment facility. Long-term plans include a future stay at a drug-free recovery center and job training to enable the patient to improve his chances of recovery.",
+            "icd10_cm": {
+                "codes": [
+                    "F11.23"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 39-year-old female with known cervical dysplasia had been seen in the outpatient surgery department the previous week for a colposcopy and biopsy. Pathologic exam of the biopsied tissue was inconclusive but suggested the possibility of a malignancy in the cervix. Before the patient could return to the outpatient surgery department for definitive treatment, she began bleeding heavily and was admitted to the hospital. A conization of the cervix was performed by loop electrosurgical excision (LEEP) using a colposcope for guidance in order to destroy the site of the possible malignancy. A portion of the cervix was submitted for histopathologic examination with the findings returned as carcinoma of the uterine cervix. The patient will follow up in the office.",
+            "icd10_cm": {
+                "codes": [
+                    "C53.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 43-year-old male presented to the emergency department complaining of abdominal pain and nausea. The patient says he is unable to keep anything down and was not able to tolerate even water that he tried to drink prior to coming to the hospital. Earlier that evening, the patient had eaten several large servings of steak at a buffet. The patient is admitted and is taken to the operating room for urgent evaluation and removal of a suspected foreign body in the esophagus. The patient undergoes an EGD and an impacted food bolus (a large piece of steak) is found in his lower esophagus. Using rat-tooth forceps, the surgeon dislodges the impacted food and removes it from the esophagus. The patient is kept in the hospital overnight to ensure that he is able to tolerate liquids and food, and is discharged the next day.",
+            "icd10_cm": {
+                "codes": [
+                    "T18.128A"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 45-year-old male presented to the emergency department (ED) complaining of fever and constant pain in his anal area. The ED physician examined the patient and immediately visualized a fluctuant, tender mass in the anal canal just past the anal orifice. The patient was also found to have a high fever with hypotension and tachycardia. The ED physician diagnosed the patient with sepsis and a perianal abscess. The patient was started on intravenous fluids and antibiotics and was taken to the operating room for incision and drainage of the abscess. In the operating room, the surgeon made an incision in the mucosa of the anal canal overlying the tender mass and purulent drainage immediately resulted from the incised abscess cavity. Cultures were obtained, which later came back positive for B. fragilis, an anaerobic Gram-negative bacterium. The abscess cavity was irrigated with sterile saline and left open to drain and heal. The patient was kept in the hospital for several days for continued administration of antibiotics and fluids and monitoring of his condition. At discharge, his diagnosis was B. fragilis sepsis due to perianal abscess.",
+            "icd10_cm": {
+                "codes": [
+                    "A41.4",
+                    "K61.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 46-year-old female, a former professional basketball athlete, was admitted to the hospital for hip replacement surgery to treat posttraumatic osteoarthritis that involved both hips. Her left hip is considerably worse than her right hip. Otherwise, the patient is in good health. Her past medical history included pneumonia three years ago and a hysterectomy for a fibroid uterus at age 40 years. A successful total left hip replacement was performed using a ceramic-on-ceramic hip replacement bearing surface prosthesis cemented in place. The patient was discharged three days later to receive physical therapy at the sports medicine center. She will be scheduled for the right hip replacement at a later date.",
+            "icd10_cm": {
+                "codes": [
+                    "M16.4"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 50-year-old male is treated for severe low back pain and numbness on the left leg over several weeks. The patient thinks the pain is the result of lifting heavy boxes during a recent move to a new residence, but the physician cannot conclude that this was the cause. Diagnostic studies reveal that the patient has a herniated disc. The patient is also found to have osteoarthritis of the lumbar spine with radiculopathy. The patient is admitted for a laminotomy and removal of the nucleus pulpous of the intervertebral disc at L4-L5 to treat the herniated disc but leaving the annulus fibrosus intact. The patient has an uneventful postoperative recovery and is discharged home to begin rehabilitation therapy in the near future.",
+            "icd10_cm": {
+                "codes": [
+                    "M51.26",
+                    "M47.26"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 50-year-old male was admitted to the hospital complaining of chest pain that was determined to be a result of an acute inferior wall (type 1) myocardial infarction (MI). The patient was treated for the acute MI. In addition, a right and left heart catheterization was performed with a Judkin's fluoroscopic coronary angiography of multiple coronary arteries, and a right and left fluoroscopic angiocardiography was performed using a low osmolar contrast dye. The patient has no history of CABG surgery in the past. He was found to have coronary arteriosclerosis due to lipid-rich plaque. The patient was also treated for persistent preexisting atrial fibrillation and discharged on day five in stable condition.",
+            "icd10_cm": {
+                "codes": [
+                    "I21.19",
+                    "I25.10",
+                    "I25.83",
+                    "I48.19"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 55-year-old female patient was admitted to her local community hospital with pre-infarction angina. She underwent a combined right and left heart cardiac catheterization with coronary angiography, Judkins technique, and was determined to have significant atherosclerotic heart disease. She has no history of bypass surgery. Triple coronary artery bypass graft (CABG) surgery was recommended for the 80 percent to 90 percent occlusion found in three native coronary vessels. The patient was an active cigarette smoker, documented as nicotine dependent. With counseling and upon consent, the patient was transferred to a medical center licensed to perform open heart surgery and scheduled for the CABG. Once the patient was safely placed under anesthesia, the left greater saphenous vein was harvested through an open approach. Once the saphenous vein that was to be used as the bypass vascular graft was harvested, it was immediately flushed with DuraGraft Endothelial Damage Inhibitor and then placed into the DuraGraft solution until the anastomoses were performed. This new intraoperative technology was performed to prevent vein graft disease or vein graft failure. Next, the triple coronary artery bypass grafting was performed on the left anterior descending, the circumflex, and the diagonal arteries. The origin of the bypass was the aorta. This procedure was performed using extracorporeal circulation while the patient was placed on cardiopulmonary bypass for the duration of the procedure. The final diagnosis documented by the provider at the medical center was triple vessel coronary artery disease, unstable angina, no myocardial infarction. Smoking cessation was strongly advised. Code the medical center procedure(s) only.",
+            "icd10_cm": {
+                "codes": [
+                    "I25.110",
+                    "F17.210"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 58-year-old patient with an established diagnosis of cancer of the left pelvic sidewall was admitted for excision of the left pelvic sidewall tumor and insertion of the CivaSheet\u00ae brachytherapy device. In the operating room the surgeon excised the tumor via a wide lower abdominal incision. After the tumor had been completely removed from the left pelvic sidewall, the surgeon placed the CivaSheet\u00ae brachytherapy device onto the tumor excision site. CivaSheet\u00ae is a low dose rate brachytherapy device containing embedded radioactive palladium-103 that is shielded on one side so that the radiation is emitted in only one direction (unidirectionally). Once the device is inserted, it begins delivering brachytherapy immediately. The patient tolerated the procedure well and proceeded to the recovery room in stable condition.\n\n(Coding tip: According to Coding Clinic First Quarter 2019, page 27, pelvic sidewall should be coded using the Body Part retroperitoneum.)",
+            "icd10_cm": {
+                "codes": [
+                    "C76.3"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 60-year-old male was acutely ill when admitted to the hospital for hematemesis. After study, the upper gastrointestinal (GI) bleeding was found to be due to a gastric varix that was caused by alcoholic cirrhosis of the liver and acute alcoholic hepatitis. The patient was known to have long-term chronic alcoholism with which he continues to struggle. The patient was also found to have esophageal varices due to the alcoholic cirrhosis of liver, but these were not bleeding at this time. The surgery performed was the creation of a transjugular intrahepatic portosystemic (venous) shunt (TIPS) performed in the radiology suite. A shunt was passed down via the jugular vein and was inserted between the portal and hepatic veins within the liver to establish communication between these two veins. The patient was discharged to a skilled nursing facility for surgical recovery and ongoing management of his serious GI diseases.",
+            "icd10_cm": {
+                "codes": [
+                    "I86.4",
+                    "K92.0",
+                    "K70.30",
+                    "K70.10",
+                    "I85.00",
+                    "F10.20"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 60-year-old male was seen by a dermatologist at the request of his primary care physician while hospitalized for other medical conditions. The patient states he spends a lot of time outdoors as a mailman and golfing every weekend. The patient expresses the concern that he may have skin cancer. He remembers that his father, a farmer, had many of these same kind of lesions on his arms and neck through the years. After performing a thorough skin examination, the physician finds multiple brown annular keratotic lesions on the patient's arms and lower legs with patchy dry areas around them. The physician performs a skin biopsy by excising a piece of a lesion on his right lower arm and examines the lesion microscopically. No cancer type cells are seen. Given the patient\u2019s history of the same lesions in the family and his frequent exposure to ultraviolet sunlight, the physician explains to the patient that he has what is referred to as DSAP, or disseminated superficial actinic porokeratosis. Further, he explains there is no treatment to prevent these lesions from returning once removed. The patient elects not to have any lesions removed at this time but will consider it and make an appointment in the future if he decides to have them removed.",
+            "icd10_cm": {
+                "codes": [
+                    "L56.5",
+                    "Z77.128",
+                    "X32.XXXA"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 62-year-old female presents to her primary care physician's office complaining of an abrupt onset of a fiery-red swelling of her face. The physician's physical examination found that the swelling covered nearly all of the right side of the woman's face with well-demarcated raised borders. Her face was erythematous and edematous on the right side and the patient had a slightly elevated temperature. The patient stated her face felt hot but described feeling only mildly ill. An infectious disease physician's office was next door and he was asked to see this patient immediately, as her primary care physician had never seen this type of facial swelling and was concerned that her airway would eventually close. The infectious disease physician recognized the condition immediately as a superficial dermal and subcutaneous infection, usually caused by group A beta-hemolytic Streptococcus. He called the condition \"acute erysipelas cellulitis\" or \"acute facial erysipelas\" and advised immediate hospital admission for intravenous antibiotics. The patient was taken to the hospital by her family in a private vehicle because her primary care physician ordered a direct admission. After admission, it was determined that due to the severity of the acute facial erysipelas, the patient would require long-term IV antibiotic treatment and a centrally inserted venous catheter was inserted through the left subclavian vein. Imaging indicated that the catheter tip was located in the superior vena cava. After two days of initial antibiotic treatment, improvement was seen, and the patient was discharged home to continue IV antibiotic therapy as an outpatient.",
+            "icd10_cm": {
+                "codes": [
+                    "A46"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 63-year-old male patient, known to have emphysema, was advised by this physician to be admitted to the hospital to evaluate and treat his worsening lung condition. The patient quit smoking cigars five years ago after he was told he had emphysema. The patient complained his coughing and wheezing had become worse, and his sputum was streaked with blood. A chest x-ray done on an outpatient basis the previous week showed a mass in the right main bronchus. After admission, a fiber optic bronchoscopy and excisional biopsy of the right main bronchial mass was performed. The pathologic diagnosis of the biopsy examination was small cell type bronchogenic carcinoma located in the right main bronchus. A nuclear medicine bone scan found areas of suspicious lesions that were determined to be bone metastasis. The diagnoses provided by the physician at discharge were bronchogenic, small cell carcinoma of the right main bronchus with metastatic disease in the bones, emphysema, and former nicotine dependence.",
+            "icd10_cm": {
+                "codes": [
+                    "C34.01",
+                    "C79.51",
+                    "J43.9",
+                    "Z87.891"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 65-year-old male collapsed in his garage after shoveling heavy, wet snow from the driveway of his single-family home. Fire department ambulance brought the man to the nearest hospital in full cardiac arrest. Family members stated the patient had an enlarged heart and had been on prescription medication for hypertensive heart disease in the past but had not seen a physician for over one year. Cardioversion and external chest compression cardiopulmonary resuscitation was initiated but was unsuccessful, and the man was pronounced dead 50 minutes after arriving at the hospital. The patient was never admitted to the hospital, with all of his medical care received in the emergency department (ED). The ED physician\u2019s conclusion in the ED record was \u201cCardiac arrest, probably due to acute myocardial infarction triggered by strenuous exertion, unknown as to exact cause with hypertensive heart disease.\u201d",
+            "icd10_cm": {
+                "codes": [
+                    "I46.9",
+                    "I11.9",
+                    "Y93.H1",
+                    "Y92.014",
+                    "Y99.8"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 68-year-old female was admitted to the hospital from a local nursing home because she has two large pressure ulcers on her sacrum and right hip with the sacral ulcer now bleeding. Lab results indicated severe anemia, and the patient received one nonautologous packed red blood cell transfusion percutaneously through a peripheral vein for her documented acute blood-loss anemia. The wound care physician and nurses treated her massive stage 3 sacral pressure ulcer and stage 2 right hip pressure ulcer. The patient was also treated for her well-controlled type 2 diabetes and hypertension. The patient also has chronic back pain (radiculopathy) from lumbar spinal osteoarthritis. Given the size of the pressure ulcers, the intensive care necessary to manage the ulcers, her chronic back pain, and subsequent immobility, a surgical consultation was obtained to consider creating a diverting colostomy to alleviate the fecal incontinence that she had for the past several months that failed to respond to medical management. The fecal incontinence had done damage to her skin and affected her skin ulcers. After completion of the red blood cell transfusion, she was stable enough for the permanent colostomy open procedure of the descending colon. There were no postoperative complications, and after two days the patient was transferred to the skilled nursing facility for recovery from surgery and continued wound care.",
+            "icd10_cm": {
+                "codes": [
+                    "L89.153",
+                    "L89.212",
+                    "D62",
+                    "E11.9",
+                    "I10",
+                    "M47.26",
+                    "R15.9",
+                    "G89.29"
+                ]
+            }
+        },
+        {
+            "medical_note": "A 90-year-old female, a resident of a long-term care facility, was admitted to the hospital with a severe decubitus ulcer on the right buttock described as a stage III pressure ulcer. The patient also had a small chronic ulcer on the right heel, currently limited to the skin. The patient also has generalized atherosclerosis of both extremities. Treatments of the skin conditions were an excisional debridement of the skin of the heel and an excisional debridement into the muscle of the buttock. The wound care nurse closely monitored the patient after surgery and gave detailed instructions to the nurses at the long-term care facility who would be taking care of the patient after discharge. The patient was transferred back to the long-term care facility. The wound care physician and nurse would visit the patient in the long-term care facility within one week to monitor the healing of the pressure and chronic ulcers.",
+            "icd10_cm": {
+                "codes": [
+                    "L89.313",
+                    "L97.411",
+                    "I70.203"
+                ]
+            }
+        },
+        {
+            "medical_note": "After numerous drug possession arrests, a 40-year-old male was mandated to the substance abuse treatment facility for admission to undergo detoxification for his cocaine use disorder, moderate. He was suspected of criminal activity to support his cocaine dependence, but repeatedly denied breaking the law even though he had difficulties with his memory. He agreed to an administration of intravenous barbiturate (narcosynthesis) in order to release any possible suppressed or repressed thoughts. Upon conclusion of the test, it was determined he was telling the truth. The procedure of detoxification occurred over the first three days of stay at the residential center. The patient was transferred to a residential center for rehabilitation services to be continued for the next 25 days.",
+            "icd10_cm": {
+                "codes": [
+                    "F14.20"
+                ]
+            }
+        },
+        {
+            "medical_note": "An 80-year-old female is admitted to the hospital with fever, malaise, and left flank pain. A urinalysis shows bacteria of more than 100,000/mL present in the urine and a subsequent urine culture shows Proteus growth as the cause of the infection. The patient was treated with intravenous antibiotics through a peripheral vein. Other preexisting conditions of hypertension, arteriosclerotic heart disease (ASHD), previous percutaneous transluminal coronary angioplasty (PTCA) but no history of coronary artery bypass graft (CABG), and long-term chronic obstructive pulmonary disease (COPD) were treated during the hospital stay. The patient also has a history of repeated urinary tract infections (UTI) over the past several years.",
+            "icd10_cm": {
+                "codes": [
+                    "N39.0",
+                    "B96.4",
+                    "I25.10",
+                    "Z98.61",
+                    "J44.9",
+                    "Z87.440"
+                ]
+            }
+        },
+        {
+            "medical_note": "An 80-year-old male who has been a long-term nursing home resident with chronic obstructive pulmonary disease (COPD) was admitted to the hospital by his primary care physician with shortness of breath, elevated white blood count, and bibasilar infiltrates. A pulmonary disease consultant agreed with the attending physician that the patient had aspiration pneumonia and acute respiratory failure, both present on admission. In addition, the pulmonologist describes the man\u2019s COPD as obstructive chronic bronchitis. The patient had an Advance Directive that indicated he did not want to be placed on a ventilator. Intravenous antibiotics were administered, and the patient agreed to be placed on intermittent positive airway pressure breathing for 48 hours. Fortunately, appropriate treatment was able to control the conditions quickly, and the patient was taken to a skilled nursing facility for extended recovery from the aspiration pneumonia and respiratory failure.\n\nGiven the patient had symptoms of three conditions (chronic lung disease, aspiration pneumonia, and respiratory failure) all present on admission, and any could have been the reason after study for the admission to the hospital, the coder asked the attending physician\u2019s assistance in identifying the principal diagnosis as determined by the circumstances of admission, the diagnostic workup, and therapy provided. The physician chose the aspiration pneumonia as patient\u2019s principal diagnosis, as it was one of the main reasons for the admission and required the greatest intensity of care and use of resources. According to the physician, the respiratory failure was suspected to have resulted from either the aspiration pneumonia or the worsening chronic lung disease affected by the aspiration pneumonia.",
+            "icd10_cm": {
+                "codes": [
+                    "J69.0",
+                    "J96.00",
+                    "J44.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "HISTORY: A 55-year-old female presented to the office with a right breast mass, approximately 2.0cm x 2.0cm, in the upper inner quadrant. There was no lymphadenopathy. She has a significant family history of breast cancer being diagnosed in her mother, maternal aunt, and older sister. Three days ago, a fine needle aspiration procedure demonstrated cells suspicious for malignancy. She was admitted to the hospital for definitive surgical treatment with a right breast lumpectomy.\n\nOPERATIVE FINDINGS: A hard 2.0 x 2.0cm mass in the upper inner quadrant of the right breast with no lymphadenopathy was confirmed. Pathology reports the specimen to be confirmed as carcinoma. The surgical margins on the mass excised were found to be normal. It is felt the entire lesion was removed.\n\nDESCRIPTION OF PROCEDURE: After preoperative counseling, the patient was taken to the operating room and placed in a supine position on the table. The chest, right breast, and shoulder were prepped with Betadine scrub and paint and draped in the usual sterile fashion. The skin around the mass was anesthetized with 1% lidocaine solution. An elliptical incision was made, leaving a 1.5-cm margin around the mass in a circumferential fashion. The mass was sharply excised down to the pectoralis fascia, which was excised and sent with the specimen of the breast. The deep medial aspect of the specimen was marked with a long suture and the deep inferior margin marked with a short suture. The wound was left open until the pathologist reported that the margins were negative under frozen section. The wound was copiously irrigated. Hemostasis was achieved with Bovie cauterization and 3-0 Vicryl suture ligatures. The skin was closed with a running subcuticular 4-0 Vicryl, Benzoin, and steri-strips. A sterile dressing was applied. The patient was subsequently transferred to the recovery room in stable condition. She tolerated the procedure well and will be advised of the procedural findings when she is returned to her room.",
+            "icd10_cm": {
+                "codes": [
+                    "C50.211",
+                    "Z80.3"
+                ]
+            }
+        },
+        {
+            "medical_note": "HISTORY: The patient is a 50-year-old female who was transferred for admission to this academic medical center from a community hospital. She was admitted to the community hospital for a coronary angiogram. The angiogram findings noted an ejection fraction of 30\u201335 percent with global dyskinesia. The physician documented that the echocardiogram revealed severe aortic valve stenosis, moderate mitral valve regurgitation, and a calcified tricuspid value. The patient is also known to have hypertensive kidney disease with end-stage renal disease (ESRD) requiring dialysis. She also has anemia of chronic disease (ESRD) and dyslipidemia. The patient also has a history of hepatitis C. Because the three valve disease (described as old rheumatic disease by the physician) has caused significant chronic diastolic and congestive heart failure, the patient agreed to open heart surgery. The procedures performed at the academic medical center are aortic valve replacement with 19-mm tissue valve, mitral valve annuloplasty with 3-mm annuloplasty ring, left radial artery cutdown for arterial line insertion, Swan-Ganz catheter insertion, and cardiopulmonary bypass. DESCRIPTION OF PROCEDURE: After detailed and informed consent was signed, the patient was brought to the operating room and placed supine on the operating table. General anesthesia was initiated and endotracheal intubation performed. Left radial artery cutdown was performed. She was prepped and draped in the usual sterile fashion. A Swan-Ganz catheter was placed via the left subclavian vein. A sternotomy was performed. The patient was heparinized. A standard cannulation was performed with arterial cannula in the ascending aorta and a single dual-stage venous cannula via the right atrial appendage. Antegrade cardioplegia catheter was inserted. Aortic cross clamp was applied, she was placed on the bypass pump, and the heart arrested. The aorta was opened. The patient had a calcified tricuspid valve. The aortic valve leaflets were excised and passed off the field. We then opened the left atrium. The echo had shown a central jet. The mitral valve sized to a 30-mm ring, and a 30-mm CG annuloplasty ring was sewn in place. The area was closed with running 4-0 Prolene. We then sized the aorta (valve) annulus to 19 mm and a Magna porcine bioprosthesis tissue graft valve was sewn in with interrupted simple sutures. Once the valve was in, the aortotomy was closed with running two layers of 4-0 Prolene. De-airing was performed through this aortotomy. The aortic cross clamp was removed. Once the patient was warmed, ventricular pacing wires were placed. Ventilation was begun, and the patient was weaned from bypass. Protamine was administered. All cannulae were removed and hemostasis ensured. Two 32-French chest tubes were placed. The sternum was closed with four figure-of-8 sternal wires, and the soft tissue was closed in three layers. The patient was taken to the adult cardiovascular intensive care unit in stable condition.",
+            "icd10_cm": {
+                "codes": [
+                    "I08.3",
+                    "I13.2",
+                    "I50.32",
+                    "N18.6",
+                    "D63.1",
+                    "E78.5",
+                    "Z86.19",
+                    "Z99.2"
+                ]
+            }
+        },
+        {
+            "medical_note": "HISTORY: The patient is an 85-year-old female who lives independently with her husband in their own home. She has been treated for hypothyroidism, hypertension, and dyslipidemia in the past. Medications for these conditions were continued during her hospital stay. Early this morning she awoke with acute onset of right flank pain. Her husband called 9-1-1, and she was brought to the hospital's emergency department. On examination she was found to be in acute pain with a palpable mass in her abdominal area. Radiologic examination found dilated loops of small bowel trapped between the abdominal wall and the ascending colon and cecum. She was admitted and taken emergently to the operating room for a suspected small bowel obstruction. The patient was found to have elevated blood pressure, which was proven to be due to her acute stress reaction about her condition and impending surgery. OPERATIVE FINDINGS: The procedure performed was an exploratory laparotomy and release of acute closed loop small bowel obstruction due to adhesions, by lysis of adhesions. Fortunately, the bowel was viable and did not have to be resected. DESCRIPTION OF PROCEDURE: After routine preparation, the patient was taken to the operating room. A midline incision was made through the scar of previous surgery, which was a hysterectomy. Supraumbilical extension of the scar was performed. Once these minor non-obstructing adhesions were taken down, the abdominal cavity was entered. One loop of small bowel was almost completely obstructed by dense adhesions. These adhesions were carefully lysed, releasing the small bowel from obstruction. The entire small bowel was mobilized and explored from the ligament of Treitz all the way to the ileocecal valve. The wound was irrigated. Hemostasis was obtained after lysis of adhesions that released the acute small bowel obstruction. Lap count and instrument count were correct. Seprafilm adhesion barrier substance was placed in the peritoneal cavity prior to closure. The fascia was closed with PDS loop. The skin was closed with a skin stapler. A dressing was applied. The patient tolerated the procedure well under general anesthesia and was taken to the post-anesthesia recovery area in good condition.",
+            "icd10_cm": {
+                "codes": [
+                    "K56.50",
+                    "E03.9",
+                    "I10",
+                    "E78.5",
+                    "F43.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "HISTORY: This patient is a 35-year-old male with a recurrent, reducible right inguinal hernia, noted on examination. He had undergone surgical repair of a right inguinal hernia 2 years ago, so he was familiar with the symptoms and called this surgeon's office for an appointment. The young man works in a health club as a personal trainer of body builders and, therefore, does heavy lifting on a daily basis. Otherwise, he is healthy, well-nourished, and well-built with no other surgical history and no other evident medical problems. Preoperative testing, including a chest x-ray, EKG, and usual laboratory work, were all within normal limits. He is admitted to the hospital for this procedure because it is a recurrent hernia, and the procedure will require that he have highly limited mobility for the next 36\u201348 hours. He will also stay in the hospital for a short recovery period. He will then be placed on work-related disability and advised to avoid working for a minimum of 4 weeks. OPERATIVE FINDINGS: A recurrent, reducible right inguinal hernia, direct and indirect, was found. There was no strangulation or gangrene. A right inguinal hernia repair (Bassini) with high ligation was performed. DESCRIPTION OF PROCEDURE: The patient was taken to the operating room and placed in a supine position on the table. After satisfactory general anesthesia was administered, the right groin was prepped with Betadine scrub and paint and draped in the usual sterile fashion. The skin overlying the groin was incised through the external inguinal ring, exposing the spermatic cord. The cord was then mobilized and a Penrose drain passed around it at the level of the pubic tubercle. The cord was skeletonized proximally, revealing a very small indirect inguinal hernia sac. The sac was dissected away from the remainder of the cord structure, which was left free of injury. The sac was opened and found to contain no contents. There was also a direct inguinal hernia noted but no femoral hernia noted. The sac was twisted and ligated with 3-0 silk suture ligature. The remainder of the sac was amputated. A floor repair was performed as described by Bassini with interrupted 0 Ethibond sutures between the transversalis fascia and the shelving edge of the inguinal ligament. The internal inguinal ring was left to the size of the tip of an adult finger, and the initial suture medially was from the transversalis fascia into the aponeurosis over the pubic tubercle. Upon completion, hemostasis was adequate, and no relaxing incision was necessary. Spermatic cord was returned to the inguinal canal. The ilioinguinal nerve was blocked prior to this procedure and reblocked again with 0.5 percent Marcaine and epinephrine solution. The pubic tubercle, inguinal ligament, and subcutaneous tissue were also anesthetized with 0.5 percent Marcaine and epinephrine solution. The external oblique was then closed with running 3-0 Vicryl. The wound was copiously irrigated and the skin closed with skin clips. A sterile dressing was applied. Gentle traction was placed on the right testicle to fully return it to the scrotum. The patient was transferred to the recovery room in stable condition.",
+            "icd10_cm": {
+                "codes": [
+                    "K40.91"
+                ]
+            }
+        },
+        {
+            "medical_note": "PRE-OPERATIVE DIAGNOSIS: Acute on Chronic Respiratory Failure with Hypoxia\nPOST-OPERATIVE DIAGNOSIS: Same\nPROCEDURE: Permanent tracheostomy\n\nINDICATIONS: The patient is a 64-year-old male who had long suffered from panlobular emphysema and became respirator dependent after being admitted to the hospital because of an onset of a gram-negative pneumonia. Because the patient was unable to be weaned from mechanical ventilation and will need long-term respiratory support, a tracheostomy was recommended to the patient\u2019s wife, the patient\u2019s agent according to his advance directive for healthcare, who consented to the procedure because her husband was unconscious and unable to consent.\n\nPROCEDURE: The patient was brought to the operating room. After being placed under general anesthesia, the neck was prepped and draped for the procedure. A 2.5 cm incision was made approximately two fingerbreadths above the sternal notch. The strap muscles were identified and divided exposing the thyroid thymus. Dissection was taken down to the cricoid. The thyroid isthmus was divided, exposing the trachea. An incision was made between the second and third tracheal rings, and an inferior based tracheal flap was created. The flap was sewn to the skin edge creating a skin flap in order to mature the tracheal stoma with 3-0 vicryl. The endotracheal tube was withdrawn to just above the tracheostomy site. An appropriate sized Shiley trach was inserted with no difficulties. The balloon was inflated and connected to the anesthesia circuit and CO2 was confirmed. The tracheostomy was secured to the skin with 2-0 silk sutures. Straight ties and a drain sponge were applied. The patient was returned to the ICU in stable condition with no obvious adverse reactions to the procedure.\n\nAssign the diagnosis identified as the reason for the procedure as the first diagnosis for this exercise as well as the underlying conditions.",
+            "icd10_cm": {
+                "codes": [
+                    "J96.21",
+                    "J43.1",
+                    "J1569",
+                    "Z99.11"
+                ]
+            }
+        },
+        {
+            "medical_note": "The 80-year-old male patient was admitted to the hospital and diagnosed with symptomatic sick sinus syndrome. The cardiologist explained to the patient that sick sinus syndrome refers to a combination of symptoms the patient experienced as well as marked sinus bradycardia diagnosed by the cardiac workup. On admission, the patient\u2019s symptoms were dizziness, confusion, fatigue, and syncope that were attributed to the sick sinus syndrome. The patient was known to have congestive heart failure, though under reasonable control with treatment continued during the hospital stay. The cardiologist recommended to the patient that he needed a dual-chamber pacemaker, and the patient consented to the procedure. PROCEDURE DESCRIPTION: The patient was brought to the pacemaker procedure suite and placed under conscious sedation. Fluoroscopic guidance was used during the procedure. One percent lidocaine was used to anesthetize the area under the left clavicle and an incision was used to create a pacemaker pocket was created in the subcutaneous tissue for the generator and leads. The left subclavian vein was cannulated percutaneously using two micro puncture sets with a regular 035 wire under fluoroscopic guidance. A 7-French sheath and a 7-French right ventricular lead was placed in the right ventricular upper septum and sutured down. The right atrial lead was placed with a 7-French sheath under fluoroscopy and sutured down. The leads were attached to the generator, which was sutured down into the pocket. The wound was irrigated with antibiotic solution and inspected for hemostasis. The wound was closed in layers. The patient was taken to the cardiology procedure recovery area and awoke from the conscious sedation. No obvious complications were noted following the procedure.",
+            "icd10_cm": {
+                "codes": [
+                    "I49.5",
+                    "I50.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 102-year-old female (a retired teacher) who was admitted to the hospital for further management of her congestive heart failure. The patient, who lives with her 80-year-old son in a single-family home, has been remarkably well in spite of her advanced age. Six months ago, she was admitted to the hospital, was found to be in congestive heart failure with chronic respiratory failure, and became oxygen dependent. The heart failure was described as chronic combined systolic and diastolic congestive type. These conditions continue to be present with her hypertension. Her son states the patient has been sleeping more and has less energy. A couple of days ago she fell while getting up from the bedside commode in her bedroom but insisted she was fine. Her son noticed her left wrist was slightly swollen and bruised. The patient has been treated for hypertension for many years and has a history of urinary tract infections. During this admission, she was found to have another urinary tract infection and was treated for it. She was continued on oxygen, and her hypertension and congestive heart failure medications were adjusted. An x-ray of the wrist showed a minimally angulated fracture involving the left distal radius. The wrist was placed in a splint for support. On day two of the hospital stay, the patient was noticeably weaker, in mild respiratory distress, and sleeping almost continually. Whenever she was attended to by the nurses, physicians, or her son, she asked them to \u201cjust let me be.\u201d The patient and her son were offered the services of palliative care and accepted. Within 48 hours of receiving palliative, supportive, and comfort care, the patient died peacefully in her sleep.",
+            "icd10_cm": {
+                "codes": [
+                    "I50.42",
+                    "I11.0",
+                    "J96.10",
+                    "N39.0",
+                    "S52.502A",
+                    "W18.11XA",
+                    "Y92.013",
+                    "Z51.5",
+                    "Z87.440",
+                    "Z99.81"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 20-year-old male who has a long history of left chronic otitis media. The patient has failed numerous medical treatments. During the examination in the ENT physician's office, he was found to have a large cholesteatoma filling up the left auditory canal. The left external canal was also filled with pus. This physician has treated the patient for several years and suspects there may be destruction of the incus, malleus, stapes, and stapes footplate as a result of the long-term ear infections. In the office record, the physician wrote the diagnoses cholesteatoma left external ear and left chronic otitis media. The patient was admitted for an open left mastoidectomy and total ossicular replacement procedure (with synthetic device) (TORP) so that his comorbid condition of Marfan's syndrome with associated cardiovascular conditions, namely aortic dilation, could be monitored with the associated risks managed.",
+            "icd10_cm": {
+                "codes": [
+                    "H60.42",
+                    "H66.92",
+                    "Q87.410"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 20-year-old male who was born with factor VIII deficiency and diagnosed with hemophilia, type A. He has been receiving factor VIII replacement therapy with some response to treatment. The patient is admitted to the hospital on this occasion for his first course of therapeutic plasmapheresis, specifically extracorporeal immunoadsorption. The procedure is performed by drawing blood from an antecubital vein through a needle and returning it to another vein in the other arm. The access vein is connected to a primed blood processor. Blood is drawn into a cell separator. The plasma is passed to a monitor that controls continuous plasma flow through one of two ECI protein A columns. One column absorbs antibodies and the other treats the remaining plasma. The treated plasma is returned to the blood processor, mixed with the patient\u2019s red blood cells, and reinfused back to the patient. This treatment took 4 hours and 10 minutes. The patient was kept in the hospital overnight to observe for any possible complications. The patient is known to have \u201chemophilic arthritis\u201d of the knees as a result of bleeding into these joints. This arthropathy caused by his hemophilia was evaluated by an orthopedic physician during his hospital stay. No complications of his immunoadsorption treatment were detected, and the patient was discharged, accompanied by his parents, for a follow-up visit in 1 week in the physician\u2019s office.",
+            "icd10_cm": {
+                "codes": [
+                    "D66",
+                    "M36.2"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 28-year-old male veteran of the Iraq war who served two tours of duty. He was referred to a Veterans Affairs Medical Center for evaluation. He experienced combat and survived two improvised-explosive-device (IED) explosions while riding in military vehicles. Four fellow soldier friends were killed in the two vehicle explosions. After returning from Iraq two years ago, the patient began experiencing anxiety-like symptoms, including a pounding heart, sweating, and trouble breathing on occasions. He also reported bad dreams of his war experiences. He had difficulty falling and staying asleep. He also reported trouble getting along with his family members and coworkers in his civilian job because of his angry outbursts over relatively minor things. He describes himself as \u201cemotionally numb\u201d and admits to having thoughts of and plans for suicide. The patient is diagnosed with chronic posttraumatic stress disorder with suicide ideation. To fully evaluate the patient and begin therapy, the patient is admitted to an inpatient unit. Over the next five days, the patient is treated with supportive psychotherapy and cognitive-behavioral therapy. At the time of discharge, the patient reported feeling better and is scheduled to continue receiving outpatient cognitive-behavior therapy.",
+            "icd10_cm": {
+                "codes": [
+                    "F43.12",
+                    "R45.851"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 37-year-old obese male who underwent a laparoscopic gastric banding surgery one year ago. The patient presented to the emergency department complaining of persistent nausea, vomiting, weakness, and epigastric abdominal pain. Imaging studies were performed, which revealed probable malposition of the gastric band. The patient consented to removal of the band. He was taken to the operating room where he underwent a laparoscopic evaluation of his gastric band. This examination confirmed that the band had indeed slipped from its proper position. It was this displacement that was causing the patient\u2019s symptoms and abdominal pain. The surgeon removed the band and its attached port laparoscopically. The patient was kept in the hospital for several days to monitor his condition and intake and treat his dehydration. His discharge diagnoses were: complication of gastric band, obesity with BMI of 40, and dehydration.",
+            "icd10_cm": {
+                "codes": [
+                    "K95.09",
+                    "E66.9",
+                    "Z68.41",
+                    "E86.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 40-year-old female with Down syndrome who was admitted to the hospital for a repeat penetrating keratoplasty (corneal transplant). The patient lives 120 miles away from the hospital with elderly parents and, because of the distance to be traveled, was being admitted instead of having an outpatient procedure. The patient had a penetrating keratoplasty on the left eye in the past. She developed a corneal ulcer and perforation, requiring a repeat penetrating keratoplasty via percutaneous approach in the left eye. The patient did understand the procedure and agreed to it, but the consent form was signed by her father. At the time of the corneal transplant it was noted again that her eye was soft and appeared to be perforated, with a flat anterior chamber. The donor cornea was prepared. The previous donor cornea was removed from the patient's eye. Four interrupted 10-0 nylon cardinal sutures were placed to secure the new donor tissue to the host, and a symmetrical rhomboid crease on the donor was noted. A total of 12 more interrupted 10-0 nylon sutures were placed equally distant from each other to secure the donor to the host, and the chamber was intermittently formed. The wound was checked for leaks, and none were seen. Subtenon injections of 80 mg Depo-Medrol and 40 mg gentamicin were administered as part of the procedure. Vigamox eye drops were placed in the eye. A bandage contact lens was placed in the eye with a shield on top. The patient was awakened and transferred to the recovery room. She stayed in the hospital overnight for pain control and management. She was examined the next morning by the ophthalmic surgeon and discharged to the care of her adult brother and parents to be driven home.",
+            "icd10_cm": {
+                "codes": [
+                    "H16.072",
+                    "Z94.7",
+                    "Q90.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 45-year-old female who recently completed treatment for empyema. Although the infection has resolved, the patient continues to suffer from a loculated pleural effusion complicated by numerous septations within the pleural cavity. She is admitted to the hospital to have tissue plasminogen activator (tPA) administered into her pleural cavity in order to break up the septations and help drain the persistent pleural effusion. Through a percutaneously placed catheter, tPA is infused into the patient\u2019s pleural cavity. The patient tolerates the procedure without any complications.",
+            "icd10_cm": {
+                "codes": [
+                    "J90"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 49-year-old automotive mechanic who was working on his vehicle at home over the weekend when he developed what he described as the \u201cmother of all headaches\u201d or the worst headache of his life. He experienced nausea without vomiting, along with visual disturbances and dizziness. He attempted to rest, but the severe headache was not relieved by Tylenol and prevented him from sleeping. He also noted vague chest discomfort. The following morning, he contacted his physician and was advised to go to the emergency department, where he was admitted. CT of the thorax and MRI of the head were performed. MRI revealed a three ring-enhancing lesion in the parietal lobe with significant edema extending into the occipital and temporal regions. CT of the thorax showed cavitating pulmonary lesions in the right lung. The patient has a 30-year history of cigarette smoking. He underwent two procedures: a closed biopsy of the parietal lobe via burr hole and a bronchoscopic biopsy of the right lung. Pathology confirmed giant cell glioblastoma multiforme of the parietal lobe with metastasis to the lung. Additional diagnoses included pre-diabetes and nicotine dependence. The patient reported prior headaches for several months but none as severe. He was discharged home to seek a second opinion at a university medical center, with copies of records and imaging provided.",
+            "icd10_cm": {
+                "codes": [
+                    "C71.3",
+                    "C78.01",
+                    "R73.03",
+                    "F17.210"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 55-year-old male with a 35-year history of alcohol abuse. He came to the hospital emergency department after having one melenic stool at home. While in the ED, he had another melenic stool. He is known to have esophageal varices secondary to alcoholic liver cirrhosis. He has had sclerotherapy for the varices in the past, but it was noted to be a failure. The patient had attempted to complete alcoholic rehabilitation on three occasions but has been unsuccessful and continues to drink\u2014according to the patient, \u201conly a couple of beers every day.\u201d The patient is also known to have thrombocytopenia that may be the result of bone marrow suppressive effect of alcohol but has not been proven, and serial blood counts were performed during this admission. He has had gastrointestinal bleeding investigated during two previous admissions. The patient was admitted and was seen in consultation by a gastroenterologist and a psychiatrist. The day after admission, the patient became increasingly tremulous and anxious, with anticipated alcohol withdrawal occurring. The withdrawal was successfully managed with medications, and the patient stayed in the hospital after threatening to leave against medical advice the evening of day 2. An upper GI endoscopy (EGD) was performed three days after admission. The findings of the exam were two small grade 1 distal esophageal varices 1 cm in length without stigmata. There were no gastric varices. The fundus and body of the stomach were within normal limits. There was mild peripyloric edema but no ulcers in the pylorus or duodenum. No sclerotherapy of the esophageal varices was necessary. It was suspected the GI bleeding had come from the esophageal varices, as there was no other source of bleeding found. The patient was given strong encouragement to continue to work toward his sobriety, especially given the fact he had detoxification therapy while in the hospital to manage his withdrawal. He acknowledged it was a good time to return to Alcoholics Anonymous, which he acknowledged was a good program for him in the past, and to take advantage of other community support systems for recovering alcoholics that the psychiatrist informed him about during this hospital stay, including two visits from gentlemen from the community program. The discharge summary prepared by his attending physician included the final diagnoses and procedures of bleeding esophageal varices in alcoholic liver cirrhosis disease, continuous alcoholism, alcoholic withdrawal, thrombocytopenia, EGD, and alcohol withdrawal treatment.",
+            "icd10_cm": {
+                "codes": [
+                    "I85.11",
+                    "K70.30",
+                    "F10.239",
+                    "D69.6"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 56-year-old male who was seen in his internist's office complaining of weakness and tingling sensations in both of his legs. Five days later the patient called his internist to say the weakness had spread to both his arms and his upper body and that is when the internist admitted the patient to the hospital. Ten days ago the patient had a viral respiratory infection. Given that fact and the sudden unexpected onset of the symmetrical weakness and abnormal sensations that spread from both legs to his upper body and both arms, the internist suspected the onset of Guillain-Barre Syndrome (GBS). A neurology consultant examined the patient and concluded the patient was having an initial attack of GBS. A diagnostic spinal tap was performed which revealed more protein in the spinal fluid than usual. The internist and neurologist recommended a treatment with plasmapheresis, where the patient's blood is drawn and then the plasma is removed and the blood cells are infused back into the patient. The patient was discharged with the final diagnosis of GBS to be followed up within the offices of the internist and the neurologist. The patient was scheduled for a nerve conduction study and physical therapy as an outpatient.",
+            "icd10_cm": {
+                "codes": [
+                    "G61.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 56-year-old male with significant hypertensive heart disease who was admitted to the hospital for an arthroscopic partial medial meniscectomy on his right knee. Due to his hypertension and heart disease, the cardiologist advised the orthopedic surgeon to admit the patient to the hospital for at least overnight monitoring after the procedure. During a previous orthopedic surgery, this patient had a hypertensive crisis and was placed in the intensive care unit for monitoring. This surgery was performed uneventfully. The patient had an arthroscopic partial medial meniscectomy of the posterior horn of the medial meniscus, right knee. This was determined to be an old tear, likely from a football playing injury. There were no loose bodies in the medial and lateral gutters. The articular cartilage surfaces were in reasonably good condition. The notches of the anterior cruciate and posterior cruciate ligaments were intact. Within the lateral compartment, the meniscus was intact and the articular cartilage surfaces in good condition. At the conclusion of the procedure, all excess fluid was drained, the portal incisions closed with nylon sutures, an injection of Marcaine was administered for pain control, and sterile dressings were applied. The patient was taken to the recovery room and then transferred to a regular bed. He was discharged the following morning with a follow-up appointment with the surgeon in 10 days.",
+            "icd10_cm": {
+                "codes": [
+                    "M23.221",
+                    "I11.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 59-year-old female who is admitted to the hospital after complaining of weakness and for her next cycle of chemotherapy. She has a primary malignancy of the transverse colon. On admission, blood work performed indicated severe anemia. The oncologist documented that the anemia was associated with malignancy. Chemotherapy was cancelled. The patient received a transfusion via a peripheral vein of (nonautologous) packed red blood cells and was discharged.",
+            "icd10_cm": {
+                "codes": [
+                    "C18.4",
+                    "D63.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 62-year-old male who was initially admitted to Hospital A and diagnosed with an acute type 1 ST elevation anterolateral wall myocardial infarction (STEMI). He had a cardiac catheterization done at Hospital A with the findings of native vessel coronary artery disease in four vessels. The patient's condition was stabilized, and the patient elected to be transferred to a larger hospital for recommended angioplasty and coronary artery stenting. Records and films were transferred with the patient directly to Hospital B for admission. At Hospital B, the patient had percutaneous transluminal angioplasty of three vessels with coronary artery disease. In addition, two non-drug-eluting stents were inserted into two coronary arteries. The patient had an uncomplicated recovery and was scheduled to begin the cardiac rehabilitation program in four weeks. Code for Hospital B.",
+            "icd10_cm": {
+                "codes": [
+                    "I21.09",
+                    "I25.10"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 65-year-old male who is receiving chemotherapy for multiple myeloma from an oncologist on staff at this hospital. The patient came to the emergency department stating he had a cough, fever, chills, and felt extremely weak. The patient was admitted. The chest x-ray at the time of admission showed evidence of pneumonia in the left lower lobe. During the hospital stay, the patient received respiratory therapy treatments, intravenous antibiotics, and supportive care. His chemistry profiles showed an abnormal BUN and glucose. Cultures of the sputum showed no pathologic organism. Blood cultures were negative. The patient's hemogram was abnormal with a hemoglobin of 9.3, hematocrit of 27, white blood cell count of 3,200 and platelets 126,000. A repeat CBC showed the hemogram had dropped to 7.5 with the hematocrit at 22. There was no evidence of GI or other source of bleeding. His oncologist also followed his care during the hospital stay and determined the pancytopenia shown on the CBC was a result of the chemotherapy the patient was receiving. For this reason, the patient was administered two units of nonautologous packed red blood cells via the patient's existing IV line in his peripheral vein. Follow-up CBC test showed hemoglobin at 9.6 and hematocrit at 28. Follow-up chest x-ray showed significant clearing of the pneumonic process. The patient was switched to oral antibiotics at the time of discharge and administered a prescription to continue taking both antibiotics for another week. The patient appeared significantly anxious, and this was discussed with him. A psychiatric consultation and possible medications were recommended, which the patient refused. The patient has a follow-up appointment with his oncologist and with the private physician within the next 10 days.",
+            "icd10_cm": {
+                "codes": [
+                    "J18.9",
+                    "C90.00",
+                    "D61.810",
+                    "T45.1X5A"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 65-year-old male who was brought to the emergency department by his wife after he complained of acute worsening of his chronic lower back pain and a sudden difficulty in urinating. The patient is also experiencing numbness and weakness in his legs. The patient states that he has been diagnosed with lumbar spinal stenosis with neurogenic claudication in the past. Imaging studies are performed and severe spinal stenosis at the level of L5 is confirmed. The patient is diagnosed with cauda equina syndrome and is taken to the operating room for an emergent decompression of the spinal cord. An L5 laminectomy is performed to relieve the pressure on the spinal cord. The patient is kept in the hospital for further monitoring of his neurological condition after the surgery. The patient\u2019s final diagnoses are cauda equina syndrome and lumbar spinal stenosis with neurogenic claudication.",
+            "icd10_cm": {
+                "codes": [
+                    "G83.4",
+                    "M48.062"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 65-year-old male with a past medical history of progressive Parkinson's disease for the past several months with a history of Parkinson's disease for the past 23 years. He was brought to the emergency department by his wife because of his increasing rigidity, loss of speech, and a new development\u2014his inability to walk and stand. The patient was admitted to inpatient status by his primary care physician. The patient was seen by his neurologist, who adjusted the patient\u2019s antiparkinson agent, carbidopa-levodopa, to 25 mg/200 mg. On physical examination, a small abscess was noted over the left lower back area. The patient's wife stated it had been present for several months and was likely irritated by the transfer belt that had been used on the patient for gait stability, but the area was not as red at home as it appeared in the hospital. Over the next three days, the cutaneous abscess bloomed in size and began draining. The patient was recommended incision and drainage of the abscess while the patient was in the hospital because of the difficulty of bringing the patient back to the hospital as an outpatient for day surgery. A surgeon examined the patient and agreed with the plan. Because the patient was almost completely stiff and contracted, the surgeon recommended performing the surgery under general anesthesia for the patient's comfort. After general anesthesia induction in surgery, the patient was placed in the right lateral decubitus position, and the area was infiltrated with 0.5% plain Marcaine. An elliptical incision was made, and the cutaneous abscess was unroofed and drained. Aerobic culture was taken. The wound was irrigated and hemostasis obtained. The subcutaneous wound was packed with saline-soaked 2 x 2 gauze, and a pressure dressing was applied. The patient tolerated the procedure well and was taken to the recovery room in good condition. Postoperatively, the patient was placed on intravenous antibiotics for 48 hours and then discharged in good condition with prescriptions for his new antiparkinson agent and an oral antibiotic. He will be followed by home health nursing for postoperative wound care.",
+            "icd10_cm": {
+                "codes": [
+                    "G20A1",
+                    "L02.212"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 68-year-old male who was admitted to the hospital for a transurethral fulguration of a bladder tumor and a bladder biopsy. Two months ago the patient was diagnosed with papillary transitional cell carcinoma in situ of the anterior wall of the bladder. The patient was also taking medications for well-managed type 2 diabetes mellitus and hypertension that were continued in the hospital. On the day of admission, the patient was taken to the endoscopy suite and underwent a transurethral endoscopic fulguration of a bladder tumor on the anterior wall of the bladder and a transurethral endoscopic biopsy by excision of another small lesion on the lateral wall of the bladder. There were no postoperative complications. On the morning of the next day the patient was voiding clear urine and intravenous fluids were discontinued. The patient was discharged later that day with several prescriptions, including a postsurgical antibiotic as well as his regular medications for his diabetes and hypertension. The final pathology report of the resected tissue and the biopsy showed papillary transitional cell carcinoma in situ of the anterior and lateral walls of bladder that was acknowledged by the surgeon in the medical record. A follow-up visit was scheduled in the urologist's office one week after discharge.",
+            "icd10_cm": {
+                "codes": [
+                    "D09.0",
+                    "E11.9",
+                    "I10"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 70-year-old male who was admitted by his cardiologist with the diagnosis of acute coronary syndrome. The patient had not had coronary angioplasty or coronary bypass surgery in the past. The patient consented to and underwent a diagnostic left heart cardiac catheterization and fluoroscopic coronary arteriography of multiple arteries with low osmolar contrast by Judkin technique, which showed extensive arteriosclerotic coronary occlusion of the left anterior descending (LAD). Other vessels also had minor coronary artery disease. Prior to the procedure, the patient understood there was the possibility that he would require a coronary stent placement, to which he also consented. Following completion of the diagnostic catheterization, the physician performed a coronary angioplasty of the LAD with the insertion of one nondrug-eluting coronary stent into the LAD. A platelet inhibitor drug (Integrilin) was also infused through the peripheral IV. The physician\u2019s final diagnosis was \u201cacute coronary syndrome due to arteriosclerotic coronary artery disease.\u201d The patient was discharged for follow-up evaluation and possible cardiac rehabilitation therapy.",
+            "icd10_cm": {
+                "codes": [
+                    "I24.9",
+                    "I25.10"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 70-year-old male who was admitted to the hospital for urology complaints and was found after study to have an enlarged prostate with urinary retention and acute renal failure. While in the hospital, he asked his physician if something could be done for his \u201csore knees.\u201d He stated it was extremely difficult for him to walk and it was limiting his activities of daily living. He was not able to accompany his wife to go shopping or go to church because his knees felt so stiff and painful and he was afraid of falling. An orthopedic surgeon was consulted who examined the patient and ordered radiology examinations of both knees. The orthopedic surgeon concluded the patient's left knee arthritis was worse than in the right knee, but both knees had significant arthritis. The orthopedic surgeon suspected the patella of the left knee could be the main problem and advised the patient to have an arthroscopic inspection of the left knee. The patient consented and was taken to surgery. The operative report documented the following: OPERATIVE FINDINGS: An arthroscopic debridement of the left patella was performed. The medial meniscus, lateral meniscus, and anterior cruciate ligament (ACL) were normal. The examination of the patellofemoral joint showed the entire surface of the patella had chondromalacia with surfaces graded from 2 to mostly 3. A significant degree of prepatellar bursitis of the left knee was likely the cause of the pain and stiffness. The patient will be given information about a total knee replacement as it is likely he will need the left knee replaced at some time in the future. DESCRIPTION OF PROCEDURE: The patient was placed under general endotracheal tube anesthesia. The left knee was prepped and draped in the usual manner for arthroscopic surgery of the left knee. After insufflation of lidocaine and epinephrine, three standard ports, two medial and one lateral, were established in the usual manner. There was difficulty in evaluating the suprapatellar pouch as well as the patellofemoral joint initially because of the extensive chondromalacia and synovial reaction. Prepatellar bursitis was present. The medial compartment was first evaluated carefully, and the medial meniscus was found to be normal to observation and probing as were the medial femoral condyle and medial tibial plateau. The ACL appeared to be intact. The lateral meniscus and lateral compartment were normal. In order to see the contents of the femoral-tibial joint, excisional debridement of pedunculated synovial tissue was necessary. On returning to the patellofemoral joint, excisional debridement of synovial tissues was done as well as on the synovial plica material. At this point, the magnitude of the problem on the patella was obvious. The entire surface of the patella was involved with chondromalacia over more of the lateral facet but also on the medial facet with grade-3 chondromalacia. This involved a large portion of the main articular surface of the patella. At the conclusion of this procedure, instrumentation was removed, and sterile dressings applied. The patient was awakened and taken to the recovery room in stable condition.",
+            "icd10_cm": {
+                "codes": [
+                    "M70.42",
+                    "M22.42"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is a 78-year-old male who was admitted to the hospital today for the implantation of a dual-chamber permanent pacemaker device. The patient had a several-month history of syncope that was investigated on a couple of encounters. Finally, it was determined that the patient's neurocardiogenic syncope was caused by carotid sinus syndrome, which another physician referred to as carotid sinus hypersensitivity. The dual-chamber cardiac pacemaker was implanted into the subcutaneous tissue of the patient's chest, followed by insertion of leads into the right atrium and right ventricle via a percutaneous approach to treat the carotid sinus syndrome. The patient had no complications from the procedure and was discharged home with an appointment with his cardiologist in 10 days.",
+            "icd10_cm": {
+                "codes": [
+                    "G90.01"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is an 80-year-old female who has been treated at the University Medical Center Glaucoma Clinic for many years. She has been seen several times in the past few months with increasing right eye pain. The patient's chronic eye pain exists in a visually useless eye. The severe eye pain is the result of long-standing glaucoma, which is now considered absolute glaucoma. The patient is requiring increasing amounts of pain medications and is very tired of the constant eye pain. Surgical options were discussed with the patient and her daughter. Today, the patient was admitted to the hospital and underwent an open evisceration of the ocular contents with placement of an ocular implant. Admission was warranted since the physician was concerned about post-operative bleeding due to the patient's long-standing hemophilia A history.",
+            "icd10_cm": {
+                "codes": [
+                    "H44.511",
+                    "H57.11",
+                    "D66"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is an 84-year-old female who was brought to the emergency department by her family upon the advice of the family physician. The patient said she had increasing abdominal pain, nausea, and some vomiting. This condition started two to three days ago, and the patient could not eat due to the nausea. Prior to this episode of illness, the patient had been reasonably well, receiving medications for hypertension and hypothyroidism. The patient was admitted. Overnight the patient appeared to become more acutely ill, developed respiratory distress, and the rapid response team evaluated her and obtained her physician's order to transfer her to the ICU. Soon after, the patient required intubation and mechanical ventilation for acute respiratory failure. The patient had signs and symptoms of septicemia and sepsis, possibly with an intra-abdominal source. Blood cultures grew E. coli. She was taken to the operating room, where she underwent an exploratory laparotomy. The surgeons found acute bowel ischemia and gangrene involving 100 percent of the small bowel and the right colon. This was an inoperable condition, and the laparotomy site was closed. The family was advised of the patient's very poor prognosis and offered hospice care, which they accepted. The mechanical ventilation was discontinued after 24 hours in place, and the patient was extubated. She was kept as comfortable as possible overnight and expired in the early morning hours of hospital day four. The physician's final diagnoses were acute ischemic and gangrenous intestine, acute respiratory failure, E. coli septicemia, hypertension, and hypothyroidism.",
+            "icd10_cm": {
+                "codes": [
+                    "K55.029",
+                    "K55.049",
+                    "A41.51",
+                    "J96.00",
+                    "I10",
+                    "E03.9",
+                    "R65.20",
+                    "Z51.5"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient is an 89-year-old female admitted to the hospital from the nursing home for surgical treatment of her pressure-induced deep tissue damage of the sacral region over the coccyx. The patient was taken to surgery, and the physician dictated an operative report that described an excisional debridement of the wound over the coccyx with excision through the fascia and into the bone. The patient was transferred back to the nursing home two days later to be visited by the surgeon and the wound care clinical nurse specialist in one week. While the patient was in the hospital, she continued to receive treatment for her chronic diastolic heart failure, coronary artery (native vessel) disease with known total chronic occlusion in at least two coronary vessels.",
+            "icd10_cm": {
+                "codes": [
+                    "L89.156",
+                    "I50.32",
+                    "I25.10",
+                    "I25.82"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient was a 45-year-old male who was admitted to the hospital by his private physician after vomiting bright red blood during a visit in the office the same day. A consultation with a gastroenterologist was requested. The gastroenterologist recommended an immediate esophagogastroduodenoscopy (EGD) to determine and control the source of the bleeding. The patient consented to the EGD, which revealed an acute, hemorrhaging duodenal ulcer. The bleeding points in the duodenum were controlled endoscopically by cautery. It was also noted that the patient had a sliding hiatal hernia. The patient recovered from the procedure well, suffered no further episodes of vomiting or bleeding, and was discharged with medications. Follow-up appointments with his physicians were scheduled.",
+            "icd10_cm": {
+                "codes": [
+                    "K26.0",
+                    "K44.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient was admitted to the hospital for other medical conditions. The patient was seen in consultation by a dermatologic surgeon at the request of his primary care physician. The 53-year-old male had two lesions on his scalp. One lesion was 1.2cm x 1.3cm x 1.0cm on the posterior scalp and was slightly raised and slightly erythematous. After injection of local anesthesia in the center of the lesion, a 3-mm punch biopsy was performed. The biopsied tissue was then removed and sent for frozen section to pathology. The frozen section was positive for basal cell carcinoma. A 5-0 Prolene stitch was used to close the defect. The patient had a second lesion about 2 cm away from the first lesion and measuring 0.5 cm x 0.2 cm. The lesion was excised by using a sharpened scalpel to penetrate the skin and dermis on both sides. This lesion was then removed and sent to pathology. The second lesion was reported to be an actinic keratosis and excised in its entirety. It was closed with a 5-0 Prolene stitch times two. Steri-strips were applied. We informed the patient that we will refer him to a plastic surgeon for removal of the basal cell carcinoma, as this may require significant undermining and wound closure may be problematic because of the size of the lesion. There is quite a bit of tension on the patient's scalp, and the excision of the basal cell carcinoma will require the skills of a plastic surgeon. The patient will be seen for follow-up in this surgeon's office in seven days and was given the name and phone number of the plastic surgeon to call for an appointment within the next two weeks. Code the diagnosis and procedure performed as a result of the consultation.",
+            "icd10_cm": {
+                "codes": [
+                    "C44.41",
+                    "L57.0"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient, a 40-year-old male, was diagnosed with acquired hemolytic anemia, autoimmune type with warm-reactive (IgG) antibodies (warm type), and had been treated with glucocorticoids (prednisone). The patient failed to respond to this medication, so it was stopped two months ago. The patient is also under treatment for systemic lupus erythematosus. Given the aggressive nature of his anemia, he was advised to be admitted to the hospital and have a total splenectomy to eliminate the body's further destruction of red blood cells. The open, total splenectomy was performed without complications, and the patient was discharged to be followed up in the physician's and surgeon's offices.",
+            "icd10_cm": {
+                "codes": [
+                    "D59.11",
+                    "M32.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient, a 45-year-old male, was seen in the intensive care unit by the ophthalmologist in consultation. The patient was acutely ill with sepsis and infected joints. The patient was noted to have a very red swollen eye. The consultant concluded the patient had acute panophthalmitis and received consent from the patient's wife to perform an anterior sclerotomy and drainage of the right eye vitreous as well as an intra-vitreal injection of anti-infective agents into the eye. The patient was taken to surgery and the eye was examined again. There was significant pus in the anterior chamber with layered hypopyon inferiorly. No view of the posterior segment was possible. An ultrasound of the eye showed the retina to be flat. A lid speculum was placed in the right eye and Betadine dripped on the conjunctival surface. A needle was placed through the temporal pars plana into the mid vitreous cavity and 0.5 cc of liquid vitreous was aspirated without difficulty. Vancomycin 1 mg in 0.1 cc and ceftazidime 2 mg in 0.1 cc were each injected into the mid-vitreous by way of the temporal pars plana without difficulty. The vitreous sample was sent for culture. The eye was protected with a dressing for surgical recovery.",
+            "icd10_cm": {
+                "codes": [
+                    "H44.011"
+                ]
+            }
+        },
+        {
+            "medical_note": "The patient, a 68-year-old female known to have congestive heart failure currently controlled by medication, is admitted to the hospital by her physician because of posterior calf pain with warmth and swelling of the proximal right lower leg. A duplex venous ultrasonography with pulse-wave Doppler detected a thrombus of the right popliteal vein intravascularly. Anticoagulant therapy was started to prevent pulmonary embolism or further venous embolization. The patient was stabilized and was able to be discharged home. Home health nurse services were arranged to take blood samples for ongoing prothrombin time (PT) laboratory tests to ensure the therapeutic level of the anticoagulant therapy in the blood. The patient was also treated for her compensated congestive heart failure while in the hospital.",
+            "icd10_cm": {
+                "codes": [
+                    "I82.431",
+                    "I50.9"
+                ]
+            }
+        },
+        {
+            "medical_note": "While an inpatient in an acute care hospital, a 60-year-old female was referred for consultation to a hematologist with a diagnosis of anemia. A bone marrow aspiration biopsy of the right iliac crest was performed. Pathologic analysis of the specimen concluded the patient had \u201chypercellular marrow with diminished iron consistent with iron deficiency anemia\u201d with the iron deficiency anemia also documented by the consultant in a postprocedure note. The attending physician agreed with the pathologist\u2019s conclusion. Code only for the consultant\u2019s diagnosis and procedure performed.",
+            "icd10_cm": {
+                "codes": [
+                    "D50.9"
+                ]
+            }
+        }
+    ]
+}
