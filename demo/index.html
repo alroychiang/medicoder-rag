@@ -517,7 +517,7 @@
     { label: "Overall precision", val: fixed3(selected / predictedAll), sub: `${selected} of ${predictedAll} predicted codes correct` },
     { label: "Cases evaluated",   val: S.num_cases,                     sub: `${S.gt_total} ground-truth codes` },
     { label: "Time / case",       val: S.average_time_seconds.toFixed(1) + "s", sub: "two LLM calls, local" },
-    { label: "Total tokens",      val: (S.total_tokens / 1000).toFixed(1) + "k", sub: `${S.total_prompt_tokens.toLocaleString()} prompt` },
+    { label: "Total tokens",      val: (S.total_tokens / 1000).toFixed(1) + "k", sub: `${S.total_prompt_tokens.toLocaleString()} tokens from prompts` },
   ].map(s => `
     <div class="stat">
       <span class="stat-label">${s.label}</span>
