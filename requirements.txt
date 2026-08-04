@@ -1,4 +1,4 @@
-# Core dependencies for the medicoder-rag pipeline.
+# Core dependencies for the medical-code-agent pipeline.
 # Pinned to the versions used during development.
 
 sentence-transformers==5.6.0   # query + codebook embeddings (S-PubMedBert)
